@@ -16,3 +16,27 @@ function salvarCliente(){
     });
     console.log(nome, telefone, email)
 };
+
+
+
+var listaDias = [];
+for(let dias=0; dias<6; dias++){
+    listaDias.push([false,false,false])
+};
+console.log(listaDias);
+
+function mudaStatusDia(id, nDia, nPeriodo){
+    if(listaDias[nDia][nPeriodo]){
+        document.getElementById(id).style.backgroundColor = "white";
+    }else{
+        document.getElementById(id).style.backgroundColor = "green";
+
+    }
+
+    atualizaListaDias(nDia, nPeriodo);
+    console.log(listaDias);
+};
+
+function atualizaListaDias(nDia, nPeriodo){
+    listaDias[nDia][nPeriodo]=!listaDias[nDia][nPeriodo];
+};
