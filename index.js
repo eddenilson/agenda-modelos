@@ -1,7 +1,7 @@
-var bd = openDatabase("myDB", "1.0", "Meu banco de Dados", 4080);
+var bd = openDatabase("myA", "1.0", "Minha agenda", 4080);
 
 bd.transaction(function(criar){
-    criar.executeSql("CREATE TABLE clientes (nome TEXT,telefone BIGINT, email TEXT)");
+    criar.executeSql("CREATE TABLE clientes (nome TEXT,telefone TEXT, email TEXT)");
 });
 
 function salvarCliente(){
