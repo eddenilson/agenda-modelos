@@ -1,17 +1,17 @@
- .main{
+.main {
     display: flex;
     flex-direction: row;
     justify-content: center;
-} 
+}
 
-.visualiza-semana{
+.visualiza-semana {
     display: grid;
     grid: 1fr / repeat(8, 1px);
     grid-column-gap: 80px;
     margin: 30px;
 }
 
-.dia-semana{
+.dia-semana {
     display: flex;
     grid-row-gap: 0px;
     flex-direction: column;
@@ -19,14 +19,13 @@
     justify-content: center;
 }
 
-.info{
+.info {
     padding: 10px;
 }
 
-.periodo{
+.periodo {
     margin: 8px;
     border-style: solid;
     border-color: rgb(0, 0, 0);
     background-color: white;
 }
-

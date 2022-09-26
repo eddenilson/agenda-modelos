@@ -1,42 +1,50 @@
 var bd = openDatabase("myA", "1.0", "Minha agenda", 4080);
 
-bd.transaction(function(criar){
-    criar.executeSql("CREATE TABLE clientes (nome TEXT,telefone TEXT, email TEXT)");
+bd.transaction(function (criar) {
+    criar.executeSql(
+        "CREATE TABLE clientes (nome TEXT,telefone TEXT, email TEXT, segundaManha BIT, segundaTarde BIT, segundaNoite BIT, terçaManha BIT, terçaTarde BIT, terçaNoite BIT, quartaManha Bit, quartaTarde BIT, quartaNoite BIT, quintaManha BIT, quintaTarde BIT, quintaNoite BIT, sextaManha BIT, sextaTarde BIT, sextaNoite BIT, sabadoManha BIT)"
+    );
 });
+var listaDias = [];
+for (let dias = 0; dias < 6; dias++) {
+    listaDias.push([false, false, false]);
+}
 
-function salvarCliente(){
+function upArrayInfos(nome, telefone, email) {
+    let arrayInfos = [nome, telefone, email];
+    for (let dias = 0; dias < 5; dias++) {
+        for (let periodos = 0; periodos < 3; periodos++) {
+            arrayInfos.push(listaDias[dias][periodos]);
+        }
+    }
+    arrayInfos.push(listaDias[5][0]);
+    return arrayInfos;
+}
+function salvarCliente() {
     window.location.reload(false);
-    console.log("11")
     const nome = document.getElementById("nomeUsuario").value;
     const telefone = document.getElementById("telefoneUsuario").value;
     const email = document.getElementById("emailUsuario").value;
-
-    bd.transaction(function(inserir){
-        inserir.executeSql("INSERT INTO clientes (nome, telefone, email) VALUES(?, ?, ?)", [nome, telefone, email]);
+    let arrayInfos = upArrayInfos(nome, telefone, email);
+    bd.transaction(function (inserir) {
+        inserir.executeSql(
+            "INSERT INTO clientes (nome, telefone, email, segundaManha, segundaTarde, segundaNoite , terçaManha, terçaTarde, terçaNoite, quartaManha, quartaTarde, quartaNoite, quintaManha, quintaTarde, quintaNoite, sextaManha, sextaTarde, sextaNoite, sabadoManha) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
+            arrayInfos
+        );
     });
-    console.log(nome, telefone, email)
-};
+    window.location.reload(false);
+}
 
-
-
-var listaDias = [];
-for(let dias=0; dias<6; dias++){
-    listaDias.push([false,false,false])
-};
-console.log(listaDias);
-
-function mudaStatusDia(id, nDia, nPeriodo){
-    if(listaDias[nDia][nPeriodo]){
+function mudaStatusDia(id, nDia, nPeriodo) {
+    if (listaDias[nDia][nPeriodo]) {
         document.getElementById(id).style.backgroundColor = "white";
-    }else{
+    } else {
         document.getElementById(id).style.backgroundColor = "green";
-
     }
 
     atualizaListaDias(nDia, nPeriodo);
-    console.log(listaDias);
-};
+}
 
-function atualizaListaDias(nDia, nPeriodo){
-    listaDias[nDia][nPeriodo]=!listaDias[nDia][nPeriodo];
-};
+function atualizaListaDias(nDia, nPeriodo) {
+    listaDias[nDia][nPeriodo] = !listaDias[nDia][nPeriodo];
+}
