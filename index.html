@@ -1,85 +1,214 @@
 <!DOCTYPE html>
 <html lang="PT-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="index.js"></Script>
-    <title>Agenda de Modelos</title>
-</head>
-<body>
-    <main>
-        <h1>Bem-vindo!!! Por favor, coloque as suas informações para entrarmos em contato.</h1>
-        <section>
-            <form>
-                <input type="text" class="entrada" id="nomeUsuario" placeholder="Nome completo">
-                <input type="number" class="entrada" id="telefoneUsuario" placeholder="Telefone">
-                <input type="text" class="entrada" id="emailUsuario" placeholder="Email">
-                <input type="submit" value="Enviar" onclick="salvarCliente()">
-                <br>
-            </form>
-        </section>
-        <h1>Marque os horários que você tem disponível</h1>
-        <section>
-            <h2>Segunda</h2>
-            <h2>Manhã</h2>
-            <input type="checkbox" class="button" id="botao">
-            <h2>Tarde</h2>
-            <input type="checkbox" class="button" id="botao">
-            <h2>Noite</h2>
-            <input type="checkbox" class="button" id="botao">
-            <h2>Terça</h2>
-            <h2>Manhã</h2>
-            <input type="checkbox" class="button" id="botao">
-            <h2>Tarde</h2>
-            <input type="checkbox" class="button" id="botao">
-            <h2>Noite</h2>
-            <input type="checkbox" class="button" id="botao">
-            <h2>Quarta</h2>
-            <h2>Manhã</h2>
-            <input type="checkbox" class="button" id="botao">
-            <h2>Tarde</h2>
-            <input type="checkbox" class="button" id="botao">
-            <h2>Noite</h2>
-            <input type="checkbox" class="button" id="botao">
-            <h2>Quinta</h2>
-            <h2>Manhã</h2>
-            <input type="checkbox" class="button" id="botao">
-            <h2>Tarde</h2>
-            <input type="checkbox" class="button" id="botao">
-            <h2>Noite</h2>
-            <input type="checkbox" class="button" id="botao">
-            <h2>Sexta</h2>
-            <h2>Manhã</h2>
-            <input type="checkbox" class="button" id="botao">
-            <h2>Tarde</h2>
-            <input type="checkbox" class="button" id="botao">
-            <h2>Noite</h2>
-            <input type="checkbox" class="button" id="botao">
-            <h2>Sábado</h2>
-            <h2>Manhã</h2>
-            <input type="checkbox" class="button" id="botao">
-            <br>
-        </section>
-        <h1>Escolha os serviços de seu interesse</h1>
-        <section>
-            <h2>Escova</h2>
-            <input type="checkbox" class="button" id="botao">
-            <h2>Hidratação</h2>
-            <input type="checkbox" class="button" id="botao">
-            <h2>Colorir</h2>
-            <input type="checkbox" class="button" id="botao">
-            <h2>Corte</h2>
-            <input type="checkbox" class="button" id="botao">
-            <h2>Colorimetria</h2>
-            <input type="checkbox" class="button" id="botao">
-            <h2>Maquiagem</h2>
-            <input type="checkbox" class="button" id="botao">
-            <h2>Depilação</h2>
-            <input type="checkbox" class="button" id="botao">
-            <h2>Manicure</h2>
-            <input type="checkbox" class="button" id="botao">
-            <br>
-        </section>
-    </main>
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="index.js"></script>
+        <link rel="stylesheet" href="style.css" />
+        <title>Agenda de Modelos</title>
+    </head>
+    <body>
+        <main>
+            <h1>
+                Bem-vindo!!! Por favor, coloque as suas informações para
+                entrarmos em contato.
+            </h1>
+            <section>
+                <form>
+                    <input
+                        type="text"
+                        class="entrada"
+                        id="nomeUsuario"
+                        placeholder="Nome completo"
+                    />
+                    <input
+                        type="number"
+                        class="entrada"
+                        id="telefoneUsuario"
+                        placeholder="Telefone"
+                    />
+                    <input
+                        type="text"
+                        class="entrada"
+                        id="emailUsuario"
+                        placeholder="Email"
+                    />
+                    <input
+                        type="submit"
+                        value="Enviar"
+                        onclick="salvarCliente()"
+                    />
+                    <br />
+                </form>
+            </section>
+            <h1>Marque os horários que você tem disponível</h1>
+            <section class="visualiza-semana">
+                <div class="dia-semana">
+                    <div class="info"></div>
+                    <div class="info">M</div>
+                    <div class="info">T</div>
+                    <div class="info">N</div>
+                </div>
+
+                <div class="dia-semana">
+                    <div>Seg</div>
+                    <div
+                        class="info periodo"
+                        id="seg-m"
+                        onclick="mudaStatusDia(`seg-m`, 0, 0)"
+                    ></div>
+                    <div
+                        class="info periodo"
+                        id="seg-t"
+                        onclick="mudaStatusDia(`seg-t`, 0, 1)"
+                    ></div>
+                    <div
+                        class="info periodo"
+                        id="seg-n"
+                        onclick="mudaStatusDia(`seg-n`, 0, 2)"
+                    ></div>
+                </div>
+                <div class="dia-semana">
+                    <div>Ter</div>
+                    <div
+                        class="info periodo"
+                        id="ter-m"
+                        onclick="mudaStatusDia(`ter-m`, 1, 0)"
+                    ></div>
+                    <div
+                        class="info periodo"
+                        id="ter-t"
+                        onclick="mudaStatusDia(`ter-t`, 1, 1)"
+                    ></div>
+                    <div
+                        class="info periodo"
+                        id="ter-n"
+                        onclick="mudaStatusDia(`ter-n`, 1, 2)"
+                    ></div>
+                </div>
+                <div class="dia-semana">
+                    <div>Qua</div>
+                    <div
+                        class="info periodo"
+                        id="qua-m"
+                        onclick="mudaStatusDia(`qua-m`, 2, 0)"
+                    ></div>
+                    <div
+                        class="info periodo"
+                        id="qua-t"
+                        onclick="mudaStatusDia(`qua-t`, 2, 1)"
+                    ></div>
+                    <div
+                        class="info periodo"
+                        id="qua-n"
+                        onclick="mudaStatusDia(`qua-n`, 2, 2)"
+                    ></div>
+                </div>
+                <div class="dia-semana">
+                    <div>Qui</div>
+                    <div
+                        class="info periodo"
+                        id="qui-m"
+                        onclick="mudaStatusDia(`qui-m`, 3, 0)"
+                    ></div>
+                    <div
+                        class="info periodo"
+                        id="qui-t"
+                        onclick="mudaStatusDia(`qui-t`, 3, 1)"
+                    ></div>
+                    <div
+                        class="info periodo"
+                        id="qui-n"
+                        onclick="mudaStatusDia(`qui-n`, 3, 2)"
+                    ></div>
+                </div>
+                <div class="dia-semana">
+                    <div>Sex</div>
+                    <div
+                        class="info periodo"
+                        id="sex-m"
+                        onclick="mudaStatusDia(`sex-m`, 4, 0)"
+                    ></div>
+                    <div
+                        class="info periodo"
+                        id="sex-t"
+                        onclick="mudaStatusDia(`sex-t`, 4, 1)"
+                    ></div>
+                    <div
+                        class="info periodo"
+                        id="sex-n"
+                        onclick="mudaStatusDia(`sex-n`, 4, 2)"
+                    ></div>
+                </div>
+                <div class="dia-semana">
+                    <div>Sab manhã</div>
+                    <div
+                        class="info periodo"
+                        id="sab-m"
+                        onclick="mudaStatusDia(`sab-m`, 5, 0)"
+                    ></div>
+                </div>
+            </section>
+            <h1>Escolha os serviços de seu interesse</h1>
+            <section>
+                <h2>Escova</h2>
+                <input
+                    type="checkbox"
+                    class="button"
+                    id="botaoEscova"
+                    onclick="mudaStatusServiços('botaoEscova', 0)"
+                />
+                <h2>Hidratação</h2>
+                <input
+                    type="checkbox"
+                    class="button"
+                    id="botaoHidratação"
+                    onclick="mudaStatusServiços('botaoHidratação', 1)"
+                />
+                <h2>Colorir</h2>
+                <input
+                    type="checkbox"
+                    class="button"
+                    id="botaoColorir"
+                    onclick="mudaStatusServiços('botaoColorir', 2)"
+                />
+                <h2>Corte</h2>
+                <input
+                    type="checkbox"
+                    class="button"
+                    id="botaoCorte"
+                    onclick="mudaStatusServiços('botaoCorte', 3)"
+                />
+                <h2>Colorimetria</h2>
+                <input
+                    type="checkbox"
+                    class="button"
+                    id="botaoColorimetria"
+                    onclick="mudaStatusServiços('botaoColorimetria', 4)"
+                />
+                <h2>Maquiagem</h2>
+                <input
+                    type="checkbox"
+                    class="button"
+                    id="botaoMaquiagem"
+                    onclick="mudaStatusServiços('botaoMaquiagem', 5)"
+                />
+                <h2>Depilação</h2>
+                <input
+                    type="checkbox"
+                    class="button"
+                    id="botaoDepilação"
+                    onclick="mudaStatusServiços('botaoDepilação', 6)"
+                />
+                <h2>Manicure</h2>
+                <input
+                    type="checkbox"
+                    class="button"
+                    id="botaoManicure"
+                    onclick="mudaStatusServiços('botaoManicure', 7)"
+                />
+                <br />
+            </section>
+        </main>
+    </body>
 </html>
