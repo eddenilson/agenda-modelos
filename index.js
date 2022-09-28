@@ -1,7 +1,7 @@
 var bd = openDatabase("myA", "1.0", "Minha agenda", 4080);
 var listaDias = [];
-var listaServiços = [];
 
+var listaServiços = [];
 bd.transaction(function (criar) {
     criar.executeSql(
         "CREATE TABLE clientes (nome TEXT,telefone TEXT, email TEXT, segundaManha BIT, segundaTarde BIT, segundaNoite BIT, terçaManha BIT, terçaTarde BIT, terçaNoite BIT, quartaManha Bit, quartaTarde BIT, quartaNoite BIT, quintaManha BIT, quintaTarde BIT, quintaNoite BIT, sextaManha BIT, sextaTarde BIT, sextaNoite BIT, sabadoManha BIT, Escova BIT, Hidratação BIT, Colorir BIT, Corte BIT, Colorimetria BIT, Maquiagem BIT, Depilação BIT, Manicure BIT)"
