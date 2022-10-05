@@ -40,9 +40,9 @@
             <section class="visualiza-semana">
                 <div class="dia-semana">
                     <div class="info"></div>
-                    <div class="info">M</div>
-                    <div class="info">T</div>
-                    <div class="info">N</div>
+                    <div class="info">Manhã</div>
+                    <div class="info">Tarde</div>
+                    <div class="info">Noite</div>
                 </div>
 
                 <div class="dia-semana">
@@ -136,7 +136,7 @@
                     ></div>
                 </div>
                 <div class="dia-semana">
-                    <div>Sab manhã</div>
+                    <div>Sab Manhã</div>
                     <div
                         class="info periodo"
                         id="sab-m"
@@ -212,6 +212,21 @@
                     onclick="salvarCliente()"
                 />
                 <br />
+            </section>
+            <section>
+                <br />
+                <input type="submit" value="Enviar" onclick="salvarCliente()" />
+            </section>
+            <br />
+            <section>
+                <input
+                    type="text"
+                    class="entrada"
+                    id="bd"
+                    placeholder="Banco de Dados"
+                />
+                <input type="submit" value="Pesquisar" onclick="PesquisaBD()" />
+                <h1 id="resposta"></h1>
             </section>
         </main>
     </body>

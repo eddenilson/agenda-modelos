@@ -65,4 +65,30 @@ function mudaStatusServiços(id, nServiço) {
     } else {
         listaServiços[nServiço] = false;
     }
-};
+}
+
+function PesquisaBD() {
+    let nome = document.getElementById("bd").value;
+    bd.transaction(function (ler) {
+        ler.executeSql(
+            `SELECT * FROM clientes WHERE nome = "${nome}"`,
+            [],
+            function (ler, results) {
+                var len = results.rows.length,
+                    i;
+                msg = "<p>Found rows: " + len + "<p/>";
+                document.getElementById("resposta").innerHTML += msg;
+
+                for (i = 0; i < len; i++) {
+                    document.getElementById("resposta").innerHTML =
+                        results.rows.item(i).nome +
+                        " " +
+                        results.rows.item(i).telefone + 
+                        " " +
+                        results.rows.item(i).email;
+                    }
+            },
+            null
+        );
+    });
+}
