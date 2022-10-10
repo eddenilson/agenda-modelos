@@ -146,35 +146,37 @@
             </section>
             <h1>Escolha os serviços de seu interesse</h1>
             <section>
-                <h2>Escova</h2>
+                <h2>
+                    <em>Escova</em>
+                </h2>
                 <input
                     type="checkbox"
                     class="button"
                     id="botaoEscova"
                     onclick="mudaStatusServiços('botaoEscova', 0)"
                 />
-                <h2>Hidratação</h2>
+                <h2><em>Hidratação</em></h2>
                 <input
                     type="checkbox"
                     class="button"
                     id="botaoHidratação"
                     onclick="mudaStatusServiços('botaoHidratação', 1)"
                 />
-                <h2>Colorir</h2>
+                <h2><em>Colorir</em></h2>
                 <input
                     type="checkbox"
                     class="button"
                     id="botaoColorir"
                     onclick="mudaStatusServiços('botaoColorir', 2)"
                 />
-                <h2>Corte</h2>
+                <h2><em>Corte</em></h2>
                 <input
                     type="checkbox"
                     class="button"
                     id="botaoCorte"
                     onclick="mudaStatusServiços('botaoCorte', 3)"
                 />
-                <h2>Colorimetria</h2>
+                <h2>Colorimetria<em>Colorimetria</em></h2>
                 <input
                     type="checkbox"
                     class="button"
@@ -203,10 +205,13 @@
                     onclick="mudaStatusServiços('botaoManicure', 7)"
                 />
                 <br />
-            </section>
-            <section>
+                <input
+                    type="submit"
+                    class="enviar"
+                    value="Enviar"
+                    onclick="salvarCliente()"
+                />
                 <br />
-                <input type="submit" value="Enviar" onclick="salvarCliente()" />
             </section>
             <br />
             <section>
