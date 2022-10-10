@@ -2,7 +2,9 @@ header {
     display: flex;
     justify-content: space-around;
 }
-
+body {
+    background: linear-gradient(rgb(166, 200, 251), rgb(243, 176, 105));
+}
 .main {
     display: flex;
     flex-direction: row;
@@ -29,6 +31,9 @@ header {
 }
 .enviar {
     background-color: #c62020;
+    margin: 15px;
+    width: 500px;
+    height: 30px;
 }
 
 .info {
