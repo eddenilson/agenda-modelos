@@ -2,8 +2,22 @@ header {
     display: flex;
     justify-content: space-around;
 }
-body {
+.fonte {
+    margin: 0px 600px;
+    /* background: #72d0a7; */
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    color: rgb(109, 86, 186);
+}
+#wrap {
+    width: 1500px;
+    margin: auto;
     background: linear-gradient(rgb(166, 200, 251), rgb(243, 176, 105));
+}
+div ol img {
+    margin: 20px 0px;
+}
+body {
+    background: #b6ece4;
 }
 .main {
     display: flex;
@@ -27,7 +41,7 @@ body {
     justify-content: center;
 }
 .entrada {
-    background-color: #ade8f4;
+    background-color: #ebeaca;
 }
 .enviar {
     background-color: #c62020;
