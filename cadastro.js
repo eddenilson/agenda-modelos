@@ -96,14 +96,21 @@ function atualizaListaDias(nDia, nPeriodo) {
     listaDias[nDia][nPeriodo] = !listaDias[nDia][nPeriodo];
 }
 
+function atualizaListaServiços(nServiço, listaServiços) {
+    listaServiços[nServiço] = !listaServiços[nServiço];
+}
+
 function mudaStatusServiços(id, nServiço) {
-    if (document.getElementById(id).checked) {
+    if (listaServiços[nServiço]) {
         listaServiços[nServiço] = true;
-        document.getElementById(id).style.backgroundColor = "green";
+        document.getElementById(id).style.backgroundColor = "rgb(228, 99, 99)";
     } else {
         listaServiços[nServiço] = false;
-        document.getElementById(id).style.backgroundColor = "white";
+        document.getElementById(id).style.backgroundColor = "green";
     }
+
+    atualizaListaServiços(nServiço);
+    return listaServiços;
 }
 
 function preenchaSemana(periodoBD, periodoId) {
@@ -122,6 +129,7 @@ function PesquisaBD() {
     bd.transaction(function (ler) {
         ler.executeSql(
             `SELECT * FROM clientes WHERE nome = "${nome}"`,
+            `SELECT * FROM clientes Where dia  = "${document.getElementById(id)}`
             [],
             function (ler, results) {
                 var len = results.rows.length,
