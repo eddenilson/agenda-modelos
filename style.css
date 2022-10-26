@@ -2,6 +2,30 @@ header {
     display: flex;
     justify-content: space-around;
 }
+input[type="submit"] {
+    background: orange;
+    color: white;
+    cursor: pointer;
+    margin: 15px;
+    width: 500px;
+    height: 30px;
+}
+input[type="submit"]:hover {
+    color: #000000;
+    background: #76ec4b;
+}
+a input[type="button"] {
+    background:rgb(255, 102, 0);
+    color: white;
+    cursor: pointer;
+    margin: 15px;
+    width: 500px;
+    height: 30px;
+}
+a input[type="button"]:hover {
+    color: #000000;
+    background: #76ec4b;
+}
 .fonte {
     margin: 0px 600px;
     /* background: #72d0a7; */
