@@ -83,7 +83,7 @@ function salvarCliente() {
 
 function mudaStatusDia(id, nDia, nPeriodo) {
     if (listaDias[nDia][nPeriodo]) {
-        document.getElementById(id).style.backgroundColor = "white";
+        document.getElementById(id).style.backgroundColor = "rgb(228, 99, 99)";
     } else {
         document.getElementById(id).style.backgroundColor = "green";
     }
@@ -136,6 +136,7 @@ function PesquisaBD() {
                         results.rows.item(i).telefone +
                         " " +
                         results.rows.item(i).email;
+                        
                     for (let j = 0; j < 16; j++) {
                         preenchaSemana(
                             results.rows.item(i)[listaPeriodoBd[j]],
