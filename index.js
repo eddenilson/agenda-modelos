@@ -99,8 +99,10 @@ function atualizaListaDias(nDia, nPeriodo) {
 function mudaStatusServiços(id, nServiço) {
     if (document.getElementById(id).checked) {
         listaServiços[nServiço] = true;
+        document.getElementById(id).style.backgroundColor = "green";
     } else {
         listaServiços[nServiço] = false;
+        document.getElementById(id).style.backgroundColor = "white";
     }
 }
 
