@@ -1,12 +1,55 @@
 header {
     display: flex;
     justify-content: space-around;
+    color: blue;
+    margin: 40px 5px 10px 5px;
+    background: #79c8d6;
+
+    /* background-color: #d38b8b; */
+}
+h1 a{
+    margin: 0px 0px 0px 200px;
+}
+input[type=submit]{
+    background: #8f0c0c;
+    color: rgb(240, 230, 230);
+    cursor: pointer;
+}
+input[type=submit]:hover{
+    background: #4ee640;
+    color: rgb(8, 15, 6);
+}
+
+h2 {
+    padding: 5px 50px 5px 10px;
+    color: rgb(221, 69, 69);
+}
+h2 :hover{
+    text-decoration: underline;
+}
+
+.imagem{
+    height: 100px;
+    margin: 0px 0px;
+}
+body {
+    font-family: Helvetica ,sans-serif;
+    background: #d1cfddfd;
+   }
+#wrap {
+    width: 980px;
+    height: 500px;
+    margin: auto;
+    background:rgb(180, 139, 139);
+    /* padding: 10px 20px; */
 }
 
 .main {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    background-color: #cf2828;
+
 }
 
 .visualiza-semana {
@@ -25,19 +68,43 @@ header {
     justify-content: center;
 }
 .entrada {
-    background-color: #ade8f4;
+    background-color: #a0c4ec;
+    border-color: rgb(7, 6, 6);
+   
+
 }
 .enviar {
-    background-color: #c62020;
+    background-color: #973c3c;
+    border-color: rgb(7, 6, 6);
+    margin: 5px;
+    padding: 5px;
+    width: 400px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px
+
 }
+
 
 .info {
     padding: 10px;
+    /* background-color: #801212; */
 }
 
 .periodo {
     margin: 8px;
     border-style: solid;
-    border-color: rgb(0, 0, 0);
-    background-color: rgb(228, 99, 99);
+    border-color: rgb(7, 7, 7);
+    background-color: rgb(133, 99, 228);
+}
+.button {
+    border-color: rgb(7, 7, 7);
+    background-color: rgb(99, 108, 228);
+
+}
+.imagemServico {
+    margin: 5px;
+    height: 80px;
+    width: 600px;
+    border-radius: 5px
 }
