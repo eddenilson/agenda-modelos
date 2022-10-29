@@ -1,5 +1,41 @@
 var bd = openDatabase("myA", "1.0", "Minha agenda", 4080);
 var listaDias = [];
+listaPeriodoBd = [
+    "segundaManha",
+    "segundaTarde",
+    "segundaNoite ",
+    "terçaManha",
+    "terçaTarde",
+    "terçaNoite",
+    "quartaManha",
+    "quartaTarde",
+    "quartaNoite",
+    "quintaManha",
+    "quintaTarde",
+    "quintaNoite",
+    "sextaManha",
+    "sextaTarde",
+    "sextaNoite",
+    "sabadoManha",
+];
+listaPeriodosId = [
+    "seg-m",
+    "seg-t",
+    "seg-n",
+    "ter-m",
+    "ter-t",
+    "ter-n",
+    "qua-m",
+    "qua-t",
+    "qua-n",
+    "qui-m",
+    "qui-t",
+    "qui-n",
+    "sex-m",
+    "sex-t",
+    "sex-n",
+    "sab-m",
+];
 
 var listaServiços = [];
 bd.transaction(function (criar) {
@@ -47,12 +83,13 @@ function salvarCliente() {
 
 function mudaStatusDia(id, nDia, nPeriodo) {
     if (listaDias[nDia][nPeriodo]) {
-        document.getElementById(id).style.backgroundColor = "white";
+        document.getElementById(id).style.backgroundColor = "rgb(228, 99, 99)";
     } else {
         document.getElementById(id).style.backgroundColor = "green";
     }
 
     atualizaListaDias(nDia, nPeriodo);
+    return listaDias;
 }
 
 function atualizaListaDias(nDia, nPeriodo) {
@@ -64,6 +101,17 @@ function mudaStatusServiços(id, nServiço) {
         listaServiços[nServiço] = true;
     } else {
         listaServiços[nServiço] = false;
+    }
+}
+
+function preenchaSemana(periodoBD, periodoId) {
+    const periodoBox = document.getElementById(periodoId);
+    if (periodoBD == "false") {
+        periodoBox.style.backgroundColor = "red";
+        console.log("red");
+    } else {
+        periodoBox.style.backgroundColor = "green";
+        console.log("green");
     }
 }
 
@@ -79,14 +127,22 @@ function PesquisaBD() {
                 msg = "<p>Found rows: " + len + "<p/>";
                 document.getElementById("resposta").innerHTML += msg;
 
-                for (i = 0; i < len; i++) {
+                for (let i = 0; i < len; i++) {
                     document.getElementById("resposta").innerHTML =
                         results.rows.item(i).nome +
                         " " +
-                        results.rows.item(i).telefone + 
+                        results.rows.item(i).telefone +
                         " " +
                         results.rows.item(i).email;
+                        
+                    for (let j = 0; j < 16; j++) {
+                        preenchaSemana(
+                            results.rows.item(i)[listaPeriodoBd[j]],
+                            listaPeriodosId[j]
+                        );
                     }
+                    preenchaSemana(results.rows.item(i).segundaManha);
+                }
             },
             null
         );
