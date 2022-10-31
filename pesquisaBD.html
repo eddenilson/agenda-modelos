@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="cadastro.js"></script>
+        <link rel="stylesheet" href="style.css" />
+        <title>peaquisaBD</title>
+    </head>
+    <body>
+        <header>
+            <img src="imagemFundo.webp" class="imagem" />
+        </header>
+        <div id="wrap">
+            <input
+                type="text"
+                class="entrada"
+                id="bd"
+                placeholder="Banco de Dados"
+            />
+            <input type="submit" value="Pesquisar" onclick="PesquisaBD()" />
+            <a href="index.html"><input type="button" value="volta" /></a>
+        </div>
+        <h2 id="resposta"></h2>
+        <section class="visualiza-semana">
+            <div class="dia-semana">
+                <div class="info"></div>
+                <strong
+                    ><div class="info">Manhã</div>
+                    <div class="info">Tarde</div>
+                    <div class="info">Noite</div></strong
+                >
+            </div>
+
+            <div class="dia-semana">
+                <div>Seg</div>
+                <div
+                    class="info periodo"
+                    id="seg-m"
+                    onclick="mudaStatusDia(`seg-m`, 0, 0)"
+                ></div>
+                <div
+                    class="info periodo"
+                    id="seg-t"
+                    onclick="mudaStatusDia(`seg-t`, 0, 1)"
+                ></div>
+                <div
+                    class="info periodo"
+                    id="seg-n"
+                    onclick="mudaStatusDia(`seg-n`, 0, 2)"
+                ></div>
+            </div>
+            <div class="dia-semana">
+                <div>Ter</div>
+                <div
+                    class="info periodo"
+                    id="ter-m"
+                    onclick="mudaStatusDia(`ter-m`, 1, 0)"
+                ></div>
+                <div
+                    class="info periodo"
+                    id="ter-t"
+                    onclick="mudaStatusDia(`ter-t`, 1, 1)"
+                ></div>
+                <div
+                    class="info periodo"
+                    id="ter-n"
+                    onclick="mudaStatusDia(`ter-n`, 1, 2)"
+                ></div>
+            </div>
+            <div class="dia-semana">
+                <div>Qua</div>
+                <div
+                    class="info periodo"
+                    id="qua-m"
+                    onclick="mudaStatusDia(`qua-m`, 2, 0)"
+                ></div>
+                <div
+                    class="info periodo"
+                    id="qua-t"
+                    onclick="mudaStatusDia(`qua-t`, 2, 1)"
+                ></div>
+                <div
+                    class="info periodo"
+                    id="qua-n"
+                    onclick="mudaStatusDia(`qua-n`, 2, 2)"
+                ></div>
+            </div>
+            <div class="dia-semana">
+                <div>Qui</div>
+                <div
+                    class="info periodo"
+                    id="qui-m"
+                    onclick="mudaStatusDia(`qui-m`, 3, 0)"
+                ></div>
+                <div
+                    class="info periodo"
+                    id="qui-t"
+                    onclick="mudaStatusDia(`qui-t`, 3, 1)"
+                ></div>
+                <div
+                    class="info periodo"
+                    id="qui-n"
+                    onclick="mudaStatusDia(`qui-n`, 3, 2)"
+                ></div>
+            </div>
+            <div class="dia-semana">
+                <div>Sex</div>
+                <div
+                    class="info periodo"
+                    id="sex-m"
+                    onclick="mudaStatusDia(`sex-m`, 4, 0)"
+                ></div>
+                <div
+                    class="info periodo"
+                    id="sex-t"
+                    onclick="mudaStatusDia(`sex-t`, 4, 1)"
+                ></div>
+                <div
+                    class="info periodo"
+                    id="sex-n"
+                    onclick="mudaStatusDia(`sex-n`, 4, 2)"
+                ></div>
+            </div>
+            <div class="dia-semana">
+                <div>Sab Manhã</div>
+                <div
+                    class="info periodo"
+                    id="sab-m"
+                    onclick="mudaStatusDia(`sab-m`, 5, 0)"
+                ></div>
+            </div>
+        </section>
+    </body>
+</html>
