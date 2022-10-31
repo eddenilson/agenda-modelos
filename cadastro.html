@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <script src="index.js"></script>
+        <script src="cadastro.js"></script>
         <link rel="stylesheet" href="style.css" />
         <title>Cadastro</title>
     </head>
@@ -154,67 +154,33 @@
                     </div>
                 </section>
                 <h1>Escolha os serviços de seu interesse</h1>
-                <section>
-                    <em> 
-                
-                    <h2>Escova</h2>
-
-                    <input
-                        type="checkbox"
-                        class="button"
-                        id="botaoEscova"
-                        onclick="mudaStatusServiços('botaoEscova', 0)"
-                    />
-                    <h2>Hidratação</h2>
-                    <input
-                        type="checkbox"
-                        class="button"
-                        id="botaoHidratação"
-                        onclick="mudaStatusServiços('botaoHidratação', 1)"
-                    />
-                    <h2>Colorir</h2>
-                    <input
-                        type="checkbox"
-                        class="button"
-                        id="botaoColorir"
-                        onclick="mudaStatusServiços('botaoColorir', 2)"
-                    />
-                    <h2>Corte</h2>
-                    <input
-                        type="checkbox"
-                        class="button"
-                        id="botaoCorte"
-                        onclick="mudaStatusServiços('botaoCorte', 3)"
-                    />
-                    <h2>Colorimetria</h2>
-                    <input
-                        type="checkbox"
-                        class="button"
-                        id="botaoColorimetria"
-                        onclick="mudaStatusServiços('botaoColorimetria', 4)"
-                    />
-                    <h2>Maquiagem</h2></em>
+                <section class="serviços">
                     
-                    <input
-                        type="checkbox"
-                        class="button"
+                
+                   <div class="info serviço"
+                        id="botaoEscova"
+                        onclick="mudaStatusServiços('botaoEscova', 0)">Escova</div>
+                   <div class="info serviço"
+                        id="botaoHidratação"
+                        onclick="mudaStatusServiços('botaoHidratação', 1)">Hidratação</div>
+                   <div class="info serviço"
+                        id="botaoColorir"
+                        onclick="mudaStatusServiços('botaoColorir', 2)">Colorir</div>
+                   <div class="info serviço"
+                        id="botaoCorte"
+                        onclick="mudaStatusServiços('botaoCorte', 3)">Corte</div>
+                   <div class="info serviço"
+                        id="botaoColorimetria"
+                        onclick="mudaStatusServiços('botaoColorimetria', 4)">Colorimetria</div>
+                   <div class="info serviço"
                         id="botaoMaquiagem"
-                        onclick="mudaStatusServiços('botaoMaquiagem', 5)"
-                    />
-                    <h2>Depilação</h2>
-                    <input
-                        type="checkbox"
-                        class="button"
+                        onclick="mudaStatusServiços('botaoMaquiagem', 5)">Maquiagem</div>               
+                   <div class="info serviço"
                         id="botaoDepilação"
-                        onclick="mudaStatusServiços('botaoDepilação', 6)"
-                    />
-                    <h2>Manicure</h2>
-                    <input
-                        type="checkbox"
-                        class="button"
+                        onclick="mudaStatusServiços('botaoDepilação', 6)">Depilação</div>
+                   <div class="info serviço"
                         id="botaoManicure"
-                        onclick="mudaStatusServiços('botaoManicure', 7)"
-                    />
+                        onclick="mudaStatusServiços('botaoManicure', 7)">Manicure</div>
                     <br />
                     <footer>
                     <input
@@ -223,7 +189,7 @@
                         value="Enviar"
                         onclick="salvarCliente()"
                         />
-                        <a href="pesquisa.html"><input type="button"value="volta"></a>
+                        <a href="index.html"><input type="button" value="voltar"></a>
                     </footer>
                     <br />
                 </section>
