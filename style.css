@@ -49,16 +49,17 @@ h2 :hover {
     /* height: 200px; */
 }
 body {
+    /* width: px; */
     font-family: Helvetica, sans-serif;
     background: rgb(241, 223, 190);
 }
-#wrap {
+/* #wrap {
     width: 980px;
-    /* height: 500px; */
+   
     margin: auto;
     background: white;
-    /* padding: 10px 20px; */
-}
+    
+} */
 input[type="submit"] {
     background: orange;
     color: white;
@@ -83,23 +84,21 @@ a input[type="button"]:hover {
     color: #000000;
     background: #76ec4b;
 }
-.fonte {
+/* .fonte {
     margin: 0px 600px;
-    /* background: #72d0a7; */
+    
     font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
     color: rgb(109, 86, 186);
-}
+} */
 #wrap {
-    width: 1500px;
+    width: 1200px;
     margin: 0px 100px 0px 100px;
     background: linear-gradient(rgb(166, 200, 251), rgb(243, 176, 105));
 }
 div ol img {
     margin: 20px 0px;
 }
-body {
-    background: #b6ece4;
-}
+
 .main {
     display: flex;
     flex-direction: row;
@@ -180,5 +179,5 @@ form ul {
     /* height: auto; */
 }
 footer {
-    background: #847dc7;
+    background: #b87dc7;
 }
