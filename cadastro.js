@@ -83,9 +83,9 @@ function salvarCliente() {
 
 function mudaStatusDia(id, nDia, nPeriodo) {
     if (listaDias[nDia][nPeriodo]) {
-        document.getElementById(id).style.backgroundColor = "rgb(228, 99, 99)";
+        document.getElementById(id).style.backgroundColor = "rgb(133, 99, 228)";
     } else {
-        document.getElementById(id).style.backgroundColor = "green";
+        document.getElementById(id).style.backgroundColor = "#76ec4b";
     }
 
     atualizaListaDias(nDia, nPeriodo);
@@ -100,9 +100,9 @@ function mudaStatusServiços(id, nServiço) {
     const servicoBox = document.getElementById(id);
     if (!listaServiços[nServiço]) {
         listaServiços[nServiço] = true;
-        servicoBox.style.backgroundColor = "green";
+        servicoBox.style.backgroundColor = "#76ec4b";
     } else {
-        servicoBox.style.backgroundColor = "red";
+        servicoBox.style.backgroundColor = "rgb(133, 99, 228)";
         listaServiços[nServiço] = false;
     }
     console.log(listaServiços);
@@ -123,6 +123,7 @@ function PesquisaBD() {
     let nome = document.getElementById("bd").value;
     bd.transaction(function (ler) {
         ler.executeSql(
+            `SELECT * FROM clientes WHERE nome = "${nome}"`,
             `SELECT * FROM clientes WHERE nome = "${nome}"`,
             [],
             function (ler, results) {

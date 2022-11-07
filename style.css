@@ -14,6 +14,7 @@ input[type="submit"] {
     background: #8f0c0c;
     color: rgb(240, 230, 230);
     cursor: pointer;
+    border-radius: 10px;
 }
 input[type="submit"]:hover {
     background: #4ee640;
@@ -23,6 +24,7 @@ input[type="button"] {
     background: #8f0c0c;
     color: rgb(240, 230, 230);
     cursor: pointer;
+    border-radius: 10px;
 }
 input[type="button"]:hover {
     background: #4ee640;
@@ -65,7 +67,7 @@ input[type="submit"] {
     color: white;
     cursor: pointer;
     margin: 15px;
-    width: 500px;
+    width: 300px;
     height: 30px;
 }
 input[type="submit"]:hover {
@@ -73,16 +75,16 @@ input[type="submit"]:hover {
     background: #76ec4b;
 }
 a input[type="button"] {
-    background: rgb(255, 102, 0);
+    background: rgb(255, 0, 0);
     color: white;
     cursor: pointer;
     margin: 15px;
-    width: 500px;
+    width: 50px;
     height: 30px;
 }
 a input[type="button"]:hover {
     color: #000000;
-    background: #76ec4b;
+    background: #ec6b4b;
 }
 /* .fonte {
     margin: 0px 600px;
@@ -91,8 +93,8 @@ a input[type="button"]:hover {
     color: rgb(109, 86, 186);
 } */
 #wrap {
-    width: 1200px;
-    margin: 0px 100px 0px 100px;
+    /* width: 1200px; */
+    margin: 0px 200px 0px 200px;
     background: linear-gradient(rgb(166, 200, 251), rgb(243, 176, 105));
 }
 div ol img {
@@ -122,6 +124,10 @@ div ol img {
     justify-content: center;
 }
 .entrada {
+    width: 300px;
+    height: 25px;
+    border-radius: 10px;
+    margin: 15px;
     background-color: beige;
     border-color: rgb(7, 6, 6);
 }
@@ -147,16 +153,15 @@ div ol img {
     border-color: rgb(7, 7, 7);
     background-color: rgb(133, 99, 228);
 }
-.serviços{
+.serviços {
     display: flex;
+    flex-direction: row;
 }
-.serviço{
-
+.serviço {
     margin: 8px;
     border-style: solid;
     border-color: rgb(7, 7, 7);
     background-color: rgb(133, 99, 228);
-
 }
 .button {
     border-color: rgb(7, 7, 7);
