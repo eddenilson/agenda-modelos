@@ -101,16 +101,16 @@ function atualizaListaServiços(nServiço, listaServiços) {
 }
 
 function mudaStatusServiços(id, nServiço) {
-    if (listaServiços[nServiço]) {
+    const servicoBox = document.getElementById(id);
+    if (!listaServiços[nServiço]) {
         listaServiços[nServiço] = true;
-        document.getElementById(id).style.backgroundColor = "rgb(228, 99, 99)";
+        servicoBox.style.backgroundColor = "green";
     } else {
+        servicoBox.style.backgroundColor = "red";
         listaServiços[nServiço] = false;
         document.getElementById(id).style.backgroundColor = "green";
     }
-
-    atualizaListaServiços(nServiço);
-    return listaServiços;
+    console.log(listaServiços);
 }
 
 function preenchaSemana(periodoBD, periodoId) {
@@ -144,7 +144,7 @@ function PesquisaBD() {
                         results.rows.item(i).telefone +
                         " " +
                         results.rows.item(i).email;
-                        
+
                     for (let j = 0; j < 16; j++) {
                         preenchaSemana(
                             results.rows.item(i)[listaPeriodoBd[j]],

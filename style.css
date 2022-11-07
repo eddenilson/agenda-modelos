@@ -1,6 +1,87 @@
 header {
     display: flex;
     justify-content: space-around;
+    color: blue;
+    margin: 40px 5px 10px 5px;
+    background: rgb(241, 223, 190);
+
+    /* background-color: #d38b8b; */
+}
+h1 a {
+    margin: 0px 0px 0px 200px;
+}
+input[type="submit"] {
+    background: #8f0c0c;
+    color: rgb(240, 230, 230);
+    cursor: pointer;
+}
+input[type="submit"]:hover {
+    background: #4ee640;
+    color: rgb(8, 15, 6);
+}
+input[type="button"] {
+    background: #8f0c0c;
+    color: rgb(240, 230, 230);
+    cursor: pointer;
+}
+input[type="button"]:hover {
+    background: #4ee640;
+    color: rgb(8, 15, 6);
+}
+.cadastre {
+    padding: 5px 50px 5px 350px;
+    color: rgb(3, 3, 3);
+}
+h2 :hover {
+    text-decoration: underline;
+}
+
+.titulo {
+    padding: 10px 10px 0px 350px;
+}
+.imagem {
+    height: 100px;
+    margin: 0px 0px;
+}
+.imagem4 {
+    padding: 5px 500px 20px 50px;
+    width: 400px;
+    /* height: 200px; */
+}
+body {
+    font-family: Helvetica, sans-serif;
+    background: rgb(241, 223, 190);
+}
+#wrap {
+    width: 980px;
+    /* height: 500px; */
+    margin: auto;
+    background: white;
+    /* padding: 10px 20px; */
+}
+input[type="submit"] {
+    background: orange;
+    color: white;
+    cursor: pointer;
+    margin: 15px;
+    width: 500px;
+    height: 30px;
+}
+input[type="submit"]:hover {
+    color: #000000;
+    background: #76ec4b;
+}
+a input[type="button"] {
+    background: rgb(255, 102, 0);
+    color: white;
+    cursor: pointer;
+    margin: 15px;
+    width: 500px;
+    height: 30px;
+}
+a input[type="button"]:hover {
+    color: #000000;
+    background: #76ec4b;
 }
 .fonte {
     margin: 0px 600px;
@@ -10,7 +91,7 @@ header {
 }
 #wrap {
     width: 1500px;
-    margin: auto;
+    margin: 0px 100px 0px 100px;
     background: linear-gradient(rgb(166, 200, 251), rgb(243, 176, 105));
 }
 div ol img {
@@ -23,6 +104,7 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    background-color: #cf2828;
 }
 
 .visualiza-semana {
@@ -41,25 +123,64 @@ body {
     justify-content: center;
 }
 .entrada {
-    background-color: #ebeaca;
+    background-color: beige;
+    border-color: rgb(7, 6, 6);
 }
 .enviar {
-    background-color: #c62020;
-    margin: 15px;
-    width: 500px;
-    height: 30px;
+    background-color: #973c3c;
+    border-color: rgb(7, 6, 6);
+    margin: 5px;
+    padding: 5px;
+    width: 400px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
 }
 
 .info {
     padding: 10px;
+    /* background-color: #801212; */
 }
 
 .periodo {
     margin: 8px;
     border-style: solid;
-    border-color: rgb(0, 0, 0);
-    background-color: rgb(228, 99, 99);
-    cursor: pointer;
+    border-color: rgb(7, 7, 7);
+    background-color: rgb(133, 99, 228);
+}
+.serviços{
+    display: flex;
+}
+.serviço{
+
+    margin: 8px;
+    border-style: solid;
+    border-color: rgb(7, 7, 7);
+    background-color: rgb(133, 99, 228);
+
+}
+.button {
+    border-color: rgb(7, 7, 7);
+    background-color: rgb(99, 108, 228);
+}
+.imagemServico {
+    margin: 5px;
+    height: 80px;
+    width: 600px;
+    border-radius: 5px;
+}
+h3 {
+    margin: 10px 350px;
+    /* letter-spacing: 4px; */
+    word-spacing: 30px;
+    padding: 20px;
+}
+form ul {
+    padding: 5px 10px 5px 200px;
+    /* height: auto; */
+}
+footer {
+    background: #847dc7;
 }
 
 .visualiza-serviço {
