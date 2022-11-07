@@ -83,7 +83,7 @@ function salvarCliente() {
 
 function mudaStatusDia(id, nDia, nPeriodo) {
     if (listaDias[nDia][nPeriodo]) {
-        document.getElementById(id).style.backgroundColor = "rgb(228, 99, 99)";
+        document.getElementById(id).style.backgroundColor = "rgb(99, 108, 228)";
     } else {
         document.getElementById(id).style.backgroundColor = "green";
     }
@@ -106,9 +106,8 @@ function mudaStatusServiços(id, nServiço) {
         listaServiços[nServiço] = true;
         servicoBox.style.backgroundColor = "green";
     } else {
-        servicoBox.style.backgroundColor = "red";
+        servicoBox.style.backgroundColor = "rgb(99, 108, 228)";
         listaServiços[nServiço] = false;
-        document.getElementById(id).style.backgroundColor = "green";
     }
     console.log(listaServiços);
 }
@@ -117,10 +116,8 @@ function preenchaSemana(periodoBD, periodoId) {
     const periodoBox = document.getElementById(periodoId);
     if (periodoBD == "false") {
         periodoBox.style.backgroundColor = "red";
-        console.log("red");
     } else {
         periodoBox.style.backgroundColor = "green";
-        console.log("green");
     }
 }
 
@@ -129,7 +126,6 @@ function PesquisaBD() {
     bd.transaction(function (ler) {
         ler.executeSql(
             `SELECT * FROM clientes WHERE nome = "${nome}"`,
-            `SELECT * FROM clientes Where dia  = "${document.getElementById(id)}`
             [],
             function (ler, results) {
                 var len = results.rows.length,
