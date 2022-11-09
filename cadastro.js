@@ -83,7 +83,7 @@ function salvarCliente() {
 
 function mudaStatusDia(id, nDia, nPeriodo) {
     if (listaDias[nDia][nPeriodo]) {
-        document.getElementById(id).style.backgroundColor = "rgb(228, 99, 99)";
+        document.getElementById(id).style.backgroundColor = "rgb(99, 108, 228)";
     } else {
         document.getElementById(id).style.backgroundColor = "green";
     }
@@ -96,13 +96,17 @@ function atualizaListaDias(nDia, nPeriodo) {
     listaDias[nDia][nPeriodo] = !listaDias[nDia][nPeriodo];
 }
 
+function atualizaListaServiços(nServiço, listaServiços) {
+    listaServiços[nServiço] = !listaServiços[nServiço];
+}
+
 function mudaStatusServiços(id, nServiço) {
     const servicoBox = document.getElementById(id);
     if (!listaServiços[nServiço]) {
         listaServiços[nServiço] = true;
         servicoBox.style.backgroundColor = "green";
     } else {
-        servicoBox.style.backgroundColor = "red";
+        servicoBox.style.backgroundColor = "rgb(99, 108, 228)";
         listaServiços[nServiço] = false;
     }
     console.log(listaServiços);
@@ -112,10 +116,8 @@ function preenchaSemana(periodoBD, periodoId) {
     const periodoBox = document.getElementById(periodoId);
     if (periodoBD == "false") {
         periodoBox.style.backgroundColor = "red";
-        console.log("red");
     } else {
         periodoBox.style.backgroundColor = "green";
-        console.log("green");
     }
 }
 
