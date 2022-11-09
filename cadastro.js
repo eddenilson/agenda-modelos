@@ -96,6 +96,10 @@ function atualizaListaDias(nDia, nPeriodo) {
     listaDias[nDia][nPeriodo] = !listaDias[nDia][nPeriodo];
 }
 
+function atualizaListaServiços(nServiço, listaServiços) {
+    listaServiços[nServiço] = !listaServiços[nServiço];
+}
+
 function mudaStatusServiços(id, nServiço) {
     const servicoBox = document.getElementById(id);
     if (!listaServiços[nServiço]) {
@@ -112,10 +116,8 @@ function preenchaSemana(periodoBD, periodoId) {
     const periodoBox = document.getElementById(periodoId);
     if (periodoBD == "false") {
         periodoBox.style.backgroundColor = "red";
-        console.log("red");
     } else {
         periodoBox.style.backgroundColor = "green";
-        console.log("green");
     }
 }
 
