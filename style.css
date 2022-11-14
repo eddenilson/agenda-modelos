@@ -45,10 +45,20 @@ h2 :hover {
     height: 100px;
     margin: 0px 0px;
 }
-.imagem4 {
-    padding: 5px 500px 20px 50px;
-    width: 400px;
+.imagens-inicio {
+    display: flex;
+    flex-direction: row;
+    /* padding: 5px 500px 20px 50px; */
+    /* width: 400px; */
+    /* display: inline-block; */
+
     /* height: 200px; */
+}
+.imagem-inicio {
+    max-height: 200px;
+    width: auto;
+    height: auto;
+    margin: 20px;
 }
 body {
     /* width: px; */

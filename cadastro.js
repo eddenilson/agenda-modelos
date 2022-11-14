@@ -126,7 +126,7 @@ function PesquisaBD() {
     bd.transaction(function (ler) {
         ler.executeSql(
             `SELECT * FROM clientes WHERE nome = "${nome}"`,
-            `SELECT * FROM clientes WHERE nome = "${nome}"`,
+           
             [],
             function (ler, results) {
                 var len = results.rows.length,
