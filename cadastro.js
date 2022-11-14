@@ -1,9 +1,9 @@
 var bd = openDatabase("myA", "1.0", "Minha agenda", 4080);
 var listaDias = [];
-listaPeriodoBd = [
+listaPeriodosBd = [
     "segundaManha",
     "segundaTarde",
-    "segundaNoite ",
+    "segundaNoite",
     "terçaManha",
     "terçaTarde",
     "terçaNoite",
@@ -36,7 +36,26 @@ listaPeriodosId = [
     "sex-n",
     "sab-m",
 ];
-
+listaServicosBd = [
+    "Escova",
+    "Hidratação",
+    "Colorir",
+    "Corte",
+    "Colorimetria",
+    "Maquiagem",
+    "Depilação",
+    "Manicure",
+];
+listaServicosId = [
+    "botaoEscova",
+    "botaoHidratação",
+    "botaoColorir",
+    "botaoCorte",
+    "botaoColorimetria",
+    "botaoMaquiagem",
+    "botaoDepilação",
+    "botaoManicure",
+];
 var listaServiços = [];
 bd.transaction(function (criar) {
     criar.executeSql(
@@ -83,9 +102,9 @@ function salvarCliente() {
 
 function mudaStatusDia(id, nDia, nPeriodo) {
     if (listaDias[nDia][nPeriodo]) {
-        document.getElementById(id).style.backgroundColor = "rgb(133, 99, 228)";
+        document.getElementById(id).style.backgroundColor = "rgb(52, 27, 217)";
     } else {
-        document.getElementById(id).style.backgroundColor = "#76ec4b";
+        document.getElementById(id).style.backgroundColor = "#45bf18";
     }
 
     atualizaListaDias(nDia, nPeriodo);
@@ -106,18 +125,28 @@ function mudaStatusServiços(id, nServiço) {
         listaServiços[nServiço] = true;
         servicoBox.style.backgroundColor = "#76ec4b";
     } else {
-        servicoBox.style.backgroundColor = "rgb(133, 99, 228)";
+        servicoBox.style.backgroundColor = "rgb(12, 163, 218)";
         listaServiços[nServiço] = false;
     }
     console.log(listaServiços);
 }
 
 function preenchaSemana(periodoBD, periodoId) {
+    console.log(periodoBD, periodoId);
     const periodoBox = document.getElementById(periodoId);
     if (periodoBD == "false") {
         periodoBox.style.backgroundColor = "red";
     } else {
         periodoBox.style.backgroundColor = "green";
+    }
+}
+function preenchaServico(servicoBD, servicoId) {
+    console.log(servicoBD, servicoId);
+    const servicoBox = document.getElementById(servicoId);
+    if (servicoBD == "false") {
+        servicoBox.style.backgroundColor = "red";
+    } else {
+        servicoBox.style.backgroundColor = "green";
     }
 }
 
@@ -126,7 +155,7 @@ function PesquisaBD() {
     bd.transaction(function (ler) {
         ler.executeSql(
             `SELECT * FROM clientes WHERE nome = "${nome}"`,
-           
+
             [],
             function (ler, results) {
                 var len = results.rows.length,
@@ -144,12 +173,24 @@ function PesquisaBD() {
 
                     for (let j = 0; j < 16; j++) {
                         preenchaSemana(
-                            results.rows.item(i)[listaPeriodoBd[j]],
+                            results.rows.item(i)[listaPeriodosBd[j]],
                             listaPeriodosId[j]
                         );
                     }
-                    preenchaSemana(results.rows.item(i).segundaManha);
+                    for (let m = 0; m < 8; m++) {
+                        preenchaServico(
+                            results.rows.item(i)[listaServicosBd[m]],
+                            listaServicosId[m]
+                        );
+                    }
+                    // preenchaSemana(results.rows.item(i).segundaManha);
+                    // preenchaServico(results.rows.item(i).botaoEscova);
                 }
+                console.log(results.rows);
+                console.log(listaPeriodosId);
+                console.log(listaPeriodosBd);
+                console.log(listaServicosBd);
+                console.log(listaServicosId);
             },
             null
         );

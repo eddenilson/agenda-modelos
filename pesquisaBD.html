@@ -5,6 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <script src="cadastro.js"></script>
+        <script src="pesquisa.js"></script>
         <link rel="stylesheet" href="style.css" />
         <title>peaquisaBD</title>
     </head>
@@ -19,153 +20,78 @@
                 id="bd"
                 placeholder="Banco de Dados"
             />
-           
+
             <input type="submit" value="Pesquisar" onclick="PesquisaBD()" />
-       
-            <br/>
-            
+
+            <br />
+
             <h2 id="resposta"></h2>
-       
+
             <section class="visualiza-semana">
-                
                 <div class="dia-semana">
                     <div class="info"></div>
                     <strong
-                    ><div class="info">Manhã</div>
-                    <div class="info">Tarde</div>
-                    <div class="info">Noite</div></strong
+                        ><div class="info">Manhã</div>
+                        <div class="info">Tarde</div>
+                        <div class="info">Noite</div></strong
                     >
                 </div>
-                
+
                 <div class="dia-semana">
                     <div>Seg</div>
-                    <div
-                    class="info periodo"
-                    id="seg-m"
-                    onclick="mudaStatusDia(`seg-m`, 0, 0)"
-                    ></div>
-                    <div
-                    class="info periodo"
-                    id="seg-t"
-                    onclick="mudaStatusDia(`seg-t`, 0, 1)"
-                    ></div>
-                    <div
-                    class="info periodo"
-                    id="seg-n"
-                    onclick="mudaStatusDia(`seg-n`, 0, 2)"
-                    ></div>
+                    <div class="info periodo" id="seg-m"></div>
+                    <div class="info periodo" id="seg-t"></div>
+                    <div class="info periodo" id="seg-n"></div>
                 </div>
                 <div class="dia-semana">
                     <div>Ter</div>
-                    <div
-                    class="info periodo"
-                    id="ter-m"
-                    onclick="mudaStatusDia(`ter-m`, 1, 0)"
-                    ></div>
-                    <div
-                    class="info periodo"
-                    id="ter-t"
-                    onclick="mudaStatusDia(`ter-t`, 1, 1)"
-                    ></div>
-                    <div
-                    class="info periodo"
-                    id="ter-n"
-                    onclick="mudaStatusDia(`ter-n`, 1, 2)"
-                    ></div>
+                    <div class="info periodo" id="ter-m"></div>
+                    <div class="info periodo" id="ter-t"></div>
+                    <div class="info periodo" id="ter-n"></div>
                 </div>
                 <div class="dia-semana">
                     <div>Qua</div>
-                    <div
-                    class="info periodo"
-                    id="qua-m"
-                    onclick="mudaStatusDia(`qua-m`, 2, 0)"
-                    ></div>
-                    <div
-                    class="info periodo"
-                    id="qua-t"
-                    onclick="mudaStatusDia(`qua-t`, 2, 1)"
-                    ></div>
-                    <div
-                    class="info periodo"
-                    id="qua-n"
-                    onclick="mudaStatusDia(`qua-n`, 2, 2)"
-                    ></div>
+                    <div class="info periodo" id="qua-m"></div>
+                    <div class="info periodo" id="qua-t"></div>
+                    <div class="info periodo" id="qua-n"></div>
                 </div>
                 <div class="dia-semana">
                     <div>Qui</div>
-                    <div
-                    class="info periodo"
-                    id="qui-m"
-                    onclick="mudaStatusDia(`qui-m`, 3, 0)"
-                    ></div>
-                    <div
-                    class="info periodo"
-                    id="qui-t"
-                    onclick="mudaStatusDia(`qui-t`, 3, 1)"
-                    ></div>
-                    <div
-                    class="info periodo"
-                    id="qui-n"
-                    onclick="mudaStatusDia(`qui-n`, 3, 2)"
-                    ></div>
+                    <div class="info periodo" id="qui-m"></div>
+                    <div class="info periodo" id="qui-t"></div>
+                    <div class="info periodo" id="qui-n"></div>
                 </div>
                 <div class="dia-semana">
                     <div>Sex</div>
-                    <div
-                    class="info periodo"
-                    id="sex-m"
-                    onclick="mudaStatusDia(`sex-m`, 4, 0)"
-                    ></div>
-                    <div
-                    class="info periodo"
-                    id="sex-t"
-                    onclick="mudaStatusDia(`sex-t`, 4, 1)"
-                    ></div>
-                    <div
-                    class="info periodo"
-                    id="sex-n"
-                    onclick="mudaStatusDia(`sex-n`, 4, 2)"
-                    ></div>
+                    <div class="info periodo" id="sex-m"></div>
+                    <div class="info periodo" id="sex-t"></div>
+                    <div class="info periodo" id="sex-n"></div>
                 </div>
-                    <div class="dia-semana">
-                        <div>Sab Manhã</div>
-                        <div
-                        class="info periodo"
-                        id="sab-m"
-                        onclick="mudaStatusDia(`sab-m`, 5, 0)"
-                    ></div>
+                <div class="dia-semana">
+                    <div>Sab Manhã</div>
+                    <div class="info periodo" id="sab-m"></div>
                 </div>
-                <br/>
-                    <section class="serviços">
-                    
-                
-                        <div class="info serviço"
-                             id="botaoEscova"
-                             onclick="mudaStatusServiços('botaoEscova', 0)">Escova</div>
-                        <div class="info serviço"
-                             id="botaoHidratação"
-                             onclick="mudaStatusServiços('botaoHidratação', 1)">Hidratação</div>
-                        <div class="info serviço"
-                             id="botaoColorir"
-                             onclick="mudaStatusServiços('botaoColorir', 2)">Colorir</div>
-                        <div class="info serviço"
-                             id="botaoCorte"
-                             onclick="mudaStatusServiços('botaoCorte', 3)">Corte</div>
-                        <div class="info serviço"
-                             id="botaoColorimetria"
-                             onclick="mudaStatusServiços('botaoColorimetria', 4)">Colorimetria</div>
-                        <div class="info serviço"
-                             id="botaoMaquiagem"
-                             onclick="mudaStatusServiços('botaoMaquiagem', 5)">Maquiagem</div>               
-                        <div class="info serviço"
-                             id="botaoDepilação"
-                             onclick="mudaStatusServiços('botaoDepilação', 6)">Depilação</div>
-                        <div class="info serviço"
-                             id="botaoManicure"
-                             onclick="mudaStatusServiços('botaoManicure', 7)">Manicure</div>
-                         <br />
-                         <!-- <footer> -->
-                         <!-- <input
+                <br />
+                <section class="serviços">
+                    <div class="info serviço" id="botaoEscova">Escova</div>
+                    <div class="info serviço" id="botaoHidratação">
+                        Hidratação
+                    </div>
+                    <div class="info serviço" id="botaoColorir">Colorir</div>
+                    <div class="info serviço" id="botaoCorte">Corte</div>
+                    <div class="info serviço" id="botaoColorimetria">
+                        Colorimetria
+                    </div>
+                    <div class="info serviço" id="botaoMaquiagem">
+                        Maquiagem
+                    </div>
+                    <div class="info serviço" id="botaoDepilação">
+                        Depilação
+                    </div>
+                    <div class="info serviço" id="botaoManicure">Manicure</div>
+                    <br />
+                    <!-- <footer> -->
+                    <!-- <input
                              type="submit"
                              class="enviar"
                              value="Enviar"
@@ -173,174 +99,213 @@
                              />
                              <a href="index.html"><input type="button" class="enviar" value="voltar"></a>
                          </footer> -->
-                         <br />
-                         <a href="index.html"><input type="button" value="volta" /></a>
-                     </section>
-                    
-            </div>  
-        </section>
-        <header>                 
-            
+                    <br />
+                    <a href="index.html"
+                        ><input type="button" value="volta"
+                    /></a>
+                </section>
+            </section>
+        </div>
+        <header>
             <!-- <img src="imagemFundo.webp"class="imagem"> -->
         </header>
         <div id="wrap">
-            
             <main>
-                    
-                <section class="visualiza-semana">
-                    <div class="dia-semana">
-                        <div class="info"></div>
-                        <strong><div class="info">Manhã</div>
-                        <div class="info">Tarde</div>
-                        <div class="info">Noite</div></strong>
-                    </div>
-                    
-                    <div class="dia-semana">
-                        <div>Seg</div>
-                        <div
-                            class="info periodo"
-                            id="seg-m"
-                            onclick="mudaStatusDia(`seg-m`, 0, 0)"
-                        ></div>
-                        <div
-                            class="info periodo"
-                            id="seg-t"
-                            onclick="mudaStatusDia(`seg-t`, 0, 1)"
-                        ></div>
-                        <div
-                            class="info periodo"
-                            id="seg-n"
-                            onclick="mudaStatusDia(`seg-n`, 0, 2)"
-                        ></div>
-                    </div>
-                    <div class="dia-semana">
-                        <div>Ter</div>
-                        <div
-                            class="info periodo"
-                            id="ter-m"
-                            onclick="mudaStatusDia(`ter-m`, 1, 0)"
-                        ></div>
-                        <div
-                            class="info periodo"
-                            id="ter-t"
-                            onclick="mudaStatusDia(`ter-t`, 1, 1)"
-                        ></div>
-                        <div
-                            class="info periodo"
-                            id="ter-n"
-                            onclick="mudaStatusDia(`ter-n`, 1, 2)"
-                        ></div>
-                    </div>
-                    <div class="dia-semana">
-                        <div>Qua</div>
-                        <div
-                            class="info periodo"
-                            id="qua-m"
-                            onclick="mudaStatusDia(`qua-m`, 2, 0)"
-                        ></div>
-                        <div
-                            class="info periodo"
-                            id="qua-t"
-                            onclick="mudaStatusDia(`qua-t`, 2, 1)"
-                        ></div>
-                        <div
-                            class="info periodo"
-                            id="qua-n"
-                            onclick="mudaStatusDia(`qua-n`, 2, 2)"
-                        ></div>
-                    </div>
-                    <div class="dia-semana">
-                        <div>Qui</div>
-                        <div
-                            class="info periodo"
-                            id="qui-m"
-                            onclick="mudaStatusDia(`qui-m`, 3, 0)"
-                        ></div>
-                        <div
-                            class="info periodo"
-                            id="qui-t"
-                            onclick="mudaStatusDia(`qui-t`, 3, 1)"
-                        ></div>
-                        <div
-                            class="info periodo"
-                            id="qui-n"
-                            onclick="mudaStatusDia(`qui-n`, 3, 2)"
-                        ></div>
-                    </div>
-                    <div class="dia-semana">
-                        <div>Sex</div>
-                        <div
-                            class="info periodo"
-                            id="sex-m"
-                            onclick="mudaStatusDia(`sex-m`, 4, 0)"
-                        ></div>
-                        <div
-                            class="info periodo"
-                            id="sex-t"
-                            onclick="mudaStatusDia(`sex-t`, 4, 1)"
-                        ></div>
-                        <div
-                            class="info periodo"
-                            id="sex-n"
-                            onclick="mudaStatusDia(`sex-n`, 4, 2)"
-                        ></div>
-                    </div>
-                    <div class="dia-semana">
-                        <div>Sab Manhã</div>
-                        <div
-                            class="info periodo"
-                            id="sab-m"
-                            onclick="mudaStatusDia(`sab-m`, 5, 0)"
-                        ></div>
-                    </div>
-                </section>
-                <!-- <h1>Escolha os serviços de seu interesse</h1> -->
-                <section class="serviços">
-                    
-                
-                   <div class="info serviço"
-                        id="botaoEscova"
-                        onclick="selecionaServico('botaoEscova', 0)">Escova</div>
-                   <div class="info serviço"
-                        id="botaoHidratação"
-                        onclick="selecionaServico('botaoHidratação', 1)">Hidratação</div>
-                   <div class="info serviço"
-                        id="botaoColorir"
-                        onclick="selecionaServico('botaoColorir', 2)">Colorir</div>
-                   <div class="info serviço"
-                        id="botaoCorte"
-                        onclick="selecionaServico('botaoCorte', 3)">Corte</div>
-                   <div class="info serviço"
-                        id="botaoColorimetria"
-                        onclick="selecionaServico('botaoColorimetria', 4)">Colorimetria</div>
-                   <div class="info serviço"
-                        id="botaoMaquiagem"
-                        onclick="selecionaServico('botaoMaquiagem', 5)">Maquiagem</div>               
-                   <div class="info serviço"
-                        id="botaoDepilação"
-                        onclick="selecionaServico('botaoDepilação', 6)">Depilação</div>
-                   <div class="info serviço"
-                        id="botaoManicure"
-                        onclick="selecionaServico('botaoManicure', 7)">Manicure</div>
-                        <!-- <footer> -->
-                        
+                <div class="columns">
+                    <div class="column">
+                        <section class="visualiza-semana">
+                            <div class="dia-semana">
+                                <div class="info"></div>
+                                <strong
+                                    ><div class="info">Manhã</div>
+                                    <div class="info">Tarde</div>
+                                    <div class="info">Noite</div></strong
+                                >
+                            </div>
+
+                            <div class="dia-semana">
+                                <div>Seg</div>
+                                <div
+                                    class="info periodo"
+                                    id="seg-m-p2"
+                                    onclick="mudaStatusDia(`seg-m-p2`, 0, 0)"
+                                ></div>
+                                <div
+                                    class="info periodo"
+                                    id="seg-t-p2"
+                                    onclick="mudaStatusDia(`seg-t-p2`, 0, 1)"
+                                ></div>
+                                <div
+                                    class="info periodo"
+                                    id="seg-n-p2"
+                                    onclick="mudaStatusDia(`seg-n-p2`, 0, 2)"
+                                ></div>
+                            </div>
+                            <div class="dia-semana">
+                                <div>Ter</div>
+                                <div
+                                    class="info periodo"
+                                    id="ter-m-p2"
+                                    onclick="mudaStatusDia(`ter-m-p2`, 1, 0)"
+                                ></div>
+                                <div
+                                    class="info periodo"
+                                    id="ter-t-p2"
+                                    onclick="mudaStatusDia(`ter-t-p2`, 1, 1)"
+                                ></div>
+                                <div
+                                    class="info periodo"
+                                    id="ter-n-p2"
+                                    onclick="mudaStatusDia(`ter-n-p2`, 1, 2)"
+                                ></div>
+                            </div>
+                            <div class="dia-semana">
+                                <div>Qua</div>
+                                <div
+                                    class="info periodo"
+                                    id="qua-m-p2"
+                                    onclick="mudaStatusDia(`qua-m-p2`, 2, 0)"
+                                ></div>
+                                <div
+                                    class="info periodo"
+                                    id="qua-t-p2"
+                                    onclick="mudaStatusDia(`qua-t-p2`, 2, 1)"
+                                ></div>
+                                <div
+                                    class="info periodo"
+                                    id="qua-n-p2"
+                                    onclick="mudaStatusDia(`qua-n-p2`, 2, 2)"
+                                ></div>
+                            </div>
+                            <div class="dia-semana">
+                                <div>Qui</div>
+                                <div
+                                    class="info periodo"
+                                    id="qui-m-p2"
+                                    onclick="mudaStatusDia(`qui-m-p2`, 3, 0)"
+                                ></div>
+                                <div
+                                    class="info periodo"
+                                    id="qui-t-p2"
+                                    onclick="mudaStatusDia(`qui-t-p2`, 3, 1)"
+                                ></div>
+                                <div
+                                    class="info periodo"
+                                    id="qui-n-p2"
+                                    onclick="mudaStatusDia(`qui-n-p2`, 3, 2)"
+                                ></div>
+                            </div>
+                            <div class="dia-semana">
+                                <div>Sex</div>
+                                <div
+                                    class="info periodo"
+                                    id="sex-m-p2"
+                                    onclick="mudaStatusDia(`sex-m-p2`, 4, 0)"
+                                ></div>
+                                <div
+                                    class="info periodo"
+                                    id="sex-t-p2"
+                                    onclick="mudaStatusDia(`sex-t-p2`, 4, 1)"
+                                ></div>
+                                <div
+                                    class="info periodo"
+                                    id="sex-n-p2"
+                                    onclick="mudaStatusDia(`sex-n-p2`, 4, 2)"
+                                ></div>
+                            </div>
+                            <div class="dia-semana">
+                                <div>Sab Manhã</div>
+                                <div
+                                    class="info periodo"
+                                    id="sab-m-p2"
+                                    onclick="mudaStatusDia(`sab-m-p2`, 5, 0)"
+                                ></div>
+                            </div>
                         </section>
-                        
-                    <input
-                        type="submit"
-                        class="enviar"
-                        value="Pesquisar"
-                        onclick="salvarCliente()"
-                        />
-                    
-                        <a href="index.html"><input type="button" class="enviar" value="voltar"></a>
-                    <!-- </footer> -->
-                    <br />
-                <br/>
-                <section>
-                    <h1 id="resposta"></h1>
-                </section>
+                        <h1>Escolha os serviços de seu interesse</h1>
+                        <section class="serviços">
+                            <div
+                                class="info serviço"
+                                id="botaoEscova-p2"
+                                onclick="mudaStatusServiços('botaoEscova-p2', 0)"
+                            >
+                                Escova
+                            </div>
+                            <div
+                                class="info serviço"
+                                id="botaoHidratação-p2"
+                                onclick="mudaStatusServiços('botaoHidratação-p2', 1)"
+                            >
+                                Hidratação
+                            </div>
+                            <div
+                                class="info serviço"
+                                id="botaoColorir-p2"
+                                onclick="mudaStatusServiços('botaoColorir-p2', 2)"
+                            >
+                                Colorir
+                            </div>
+                            <div
+                                class="info serviço"
+                                id="botaoCorte-p2"
+                                onclick="mudaStatusServiços('botaoCorte-p2', 3)"
+                            >
+                                Corte
+                            </div>
+                            <div
+                                class="info serviço"
+                                id="botaoColorimetria-p2"
+                                onclick="mudaStatusServiços('botaoColorimetria-p2', 4)"
+                            >
+                                Colorimetria
+                            </div>
+                            <div
+                                class="info serviço"
+                                id="botaoMaquiagem-p2"
+                                onclick="mudaStatusServiços('botaoMaquiagem-p2', 5)"
+                            >
+                                Maquiagem
+                            </div>
+                            <div
+                                class="info serviço"
+                                id="botaoDepilação-p2"
+                                onclick="mudaStatusServiços('botaoDepilação-p2', 6)"
+                            >
+                                Depilação
+                            </div>
+                            <div
+                                class="info serviço"
+                                id="botaoManicure-p2"
+                                onclick="mudaStatusServiços('botaoManicure-p2', 7)"
+                            >
+                                Manicure
+                            </div>
+                            <br />
+                            <input
+                                type="submit"
+                                class="enviar"
+                                value="Pesquisar"
+                                onclick="peaquisarDiasServiços()"
+                            />
+
+                            <a href="index.html"
+                                ><input
+                                    type="button"
+                                    class="enviar"
+                                    value="voltar"
+                            /></a>
+                            <!-- </footer> -->
+                            <br />
+                            <br />
+                        </section>
+                    </div>
+                    <div class="column">
+                        <section>
+                            <h1 id="resposta-ocorrencias"></h1>
+                        </section>
+                    </div>
+                </div>
             </main>
-        </div>         
+        </div>
     </body>
 </html>
