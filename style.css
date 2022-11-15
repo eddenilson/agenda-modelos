@@ -29,7 +29,7 @@ input[type="button"]:hover {
     color: rgb(8, 15, 6);
 }
 .cadastre {
-    padding: 5px 50px 5px 400px;
+    padding: 5px 50px 5px 350px;
     color: rgb(3, 3, 3);
 }
 h2 :hover {
@@ -118,9 +118,9 @@ div ol img {
     justify-content: center;
 }
 .entrada {
-    width: 300px;
-    height: 25px;
-    border-radius: 10px;
+    width: 200px;
+    height: 20px;
+    border-radius: 5px;
     margin: 15px;
     background-color: beige;
     border-color: rgb(7, 6, 6);
@@ -149,6 +149,7 @@ div ol img {
 }
 .serviços {
     display: flex;
+    /* margin:5px 10px 5px 10px; */
     flex-direction: row;
 }
 .serviço {
@@ -167,12 +168,13 @@ div ol img {
     border-radius: 5px;
 }
 h3 {
-    margin: 10px 350px;
+    margin: 10px 250px;
     word-spacing: 30px;
     padding: 20px;
 }
 form ul {
-    padding: 5px 10px 5px 200px;
+    padding: 5px 10px 5px 100px;
+    /* display: flex; */
 }
 footer {
     background: #b87dc7;
