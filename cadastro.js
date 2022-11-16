@@ -1,5 +1,8 @@
 var bd = openDatabase("myA", "1.0", "Minha agenda", 4080);
 var listaDias = [];
+let corMarcada = "rgb(69, 191, 24)";
+
+let corDesmarcada = "red";
 listaPeriodosBd = [
     "segundaManha",
     "segundaTarde",
@@ -123,9 +126,9 @@ function mudaStatusServiços(id, nServiço) {
     const servicoBox = document.getElementById(id);
     if (!listaServiços[nServiço]) {
         listaServiços[nServiço] = true;
-        servicoBox.style.backgroundColor = "#76ec4b";
+        servicoBox.style.backgroundColor = corMarcada;
     } else {
-        servicoBox.style.backgroundColor = "rgb(12, 163, 218)";
+        servicoBox.style.backgroundColor = corDesmarcada;
         listaServiços[nServiço] = false;
     }
     console.log(listaServiços);
@@ -135,18 +138,18 @@ function preenchaSemana(periodoBD, periodoId) {
     console.log(periodoBD, periodoId);
     const periodoBox = document.getElementById(periodoId);
     if (periodoBD == "false") {
-        periodoBox.style.backgroundColor = "red";
+        periodoBox.style.backgroundColor = corDesmarcada;
     } else {
-        periodoBox.style.backgroundColor = "green";
+        periodoBox.style.backgroundColor = corMarcada;
     }
 }
 function preenchaServico(servicoBD, servicoId) {
     console.log(servicoBD, servicoId);
     const servicoBox = document.getElementById(servicoId);
     if (servicoBD == "false") {
-        servicoBox.style.backgroundColor = "red";
+        servicoBox.style.backgroundColor = corDesmarcada;
     } else {
-        servicoBox.style.backgroundColor = "green";
+        servicoBox.style.backgroundColor = corMarcada;
     }
 }
 
@@ -174,13 +177,13 @@ function PesquisaBD() {
                     for (let j = 0; j < 16; j++) {
                         preenchaSemana(
                             results.rows.item(i)[listaPeriodosBd[j]],
-                            listaPeriodosId[j]
+                            listaPeriodosId[j] + "-exibe"
                         );
                     }
                     for (let m = 0; m < 8; m++) {
                         preenchaServico(
                             results.rows.item(i)[listaServicosBd[m]],
-                            listaServicosId[m]
+                            listaServicosId[m] + "-exibe"
                         );
                     }
                     // preenchaSemana(results.rows.item(i).segundaManha);

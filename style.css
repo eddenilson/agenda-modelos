@@ -29,7 +29,7 @@ input[type="button"]:hover {
     color: rgb(8, 15, 6);
 }
 .cadastre {
-    padding: 5px 50px 5px 400px;
+    padding: 5px 50px 5px 470px;
     color: rgb(3, 3, 3);
 }
 h2 :hover {
@@ -37,7 +37,7 @@ h2 :hover {
 }
 
 .titulo {
-    padding: 10px 10px 0px 350px;
+    padding: 10px 10px 0px 450px;
 }
 .imagem {
     height: 100px;
@@ -77,7 +77,7 @@ input[type="submit"]:focus {
 }
 a input[type="button"] {
     background: rgb(255, 0, 0);
-    color: white;
+    color: rgb(255, 255, 255);
     cursor: pointer;
     margin: 15px;
     width: 50px;
