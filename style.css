@@ -4,8 +4,6 @@ header {
     color: blue;
     margin: 40px 5px 10px 5px;
     background: rgb(241, 223, 190);
-
-    /* background-color: #d38b8b; */
 }
 h1 a {
     margin: 0px 0px 0px 200px;
@@ -14,6 +12,7 @@ input[type="submit"] {
     background: #8f0c0c;
     color: rgb(240, 230, 230);
     cursor: pointer;
+    border-radius: 10px;
 }
 input[type="submit"]:hover {
     background: #4ee640;
@@ -23,13 +22,14 @@ input[type="button"] {
     background: #8f0c0c;
     color: rgb(240, 230, 230);
     cursor: pointer;
+    border-radius: 10px;
 }
 input[type="button"]:hover {
     background: #4ee640;
     color: rgb(8, 15, 6);
 }
 .cadastre {
-    padding: 5px 50px 5px 350px;
+    padding: 5px 50px 5px 470px;
     color: rgb(3, 3, 3);
 }
 h2 :hover {
@@ -37,69 +37,65 @@ h2 :hover {
 }
 
 .titulo {
-    padding: 10px 10px 0px 350px;
+    padding: 10px 10px 0px 450px;
 }
 .imagem {
     height: 100px;
     margin: 0px 0px;
 }
-.imagem4 {
-    padding: 5px 500px 20px 50px;
-    width: 400px;
-    /* height: 200px; */
+.imagens-inicio {
+    display: flex;
+    flex-direction: row;
+}
+
+.imagem-inicio {
+    max-height: 200px;
+    width: auto;
+    height: auto;
+    margin: 20px;
 }
 body {
     font-family: Helvetica, sans-serif;
     background: rgb(241, 223, 190);
 }
-#wrap {
-    width: 980px;
-    /* height: 500px; */
-    margin: auto;
-    background: white;
-    /* padding: 10px 20px; */
-}
+
 input[type="submit"] {
-    background: orange;
+    background: rgb(12, 163, 218);
     color: white;
     cursor: pointer;
     margin: 15px;
-    width: 500px;
+    width: 300px;
     height: 30px;
 }
 input[type="submit"]:hover {
     color: #000000;
-    background: #76ec4b;
+    background: #159abb;
+}
+input[type="submit"]:focus {
+    color: #000000;
+    background: #157f9a;
 }
 a input[type="button"] {
-    background: rgb(255, 102, 0);
-    color: white;
+    background: rgb(255, 0, 0);
+    color: rgb(255, 255, 255);
     cursor: pointer;
     margin: 15px;
-    width: 500px;
+    width: 50px;
     height: 30px;
 }
 a input[type="button"]:hover {
     color: #000000;
-    background: #76ec4b;
+    background: #ec6b4b;
 }
-.fonte {
-    margin: 0px 600px;
-    /* background: #72d0a7; */
-    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-    color: rgb(109, 86, 186);
-}
+
 #wrap {
-    width: 1500px;
-    margin: 0px 100px 0px 100px;
+    margin: 0px 200px 0px 200px;
     background: linear-gradient(rgb(166, 200, 251), rgb(243, 176, 105));
 }
 div ol img {
     margin: 20px 0px;
 }
-body {
-    background: #b6ece4;
-}
+
 .main {
     display: flex;
     flex-direction: row;
@@ -112,7 +108,6 @@ body {
     grid: 1fr / repeat(8, 1px);
     grid-column-gap: 80px;
     margin: 30px;
-    /* background-color: #d67878; */
 }
 
 .dia-semana {
@@ -123,6 +118,10 @@ body {
     justify-content: center;
 }
 .entrada {
+    width: 200px;
+    height: 20px;
+    border-radius: 5px;
+    margin: 15px;
     background-color: beige;
     border-color: rgb(7, 6, 6);
 }
@@ -139,25 +138,24 @@ body {
 
 .info {
     padding: 10px;
-    /* background-color: #801212; */
 }
+
 
 .periodo {
     margin: 8px;
-    border-style: solid;
-    border-color: rgb(7, 7, 7);
-    background-color: rgb(133, 99, 228);
+    background-color: rgb(52, 27, 217);
+    opacity: 0.7;
+    cursor: pointer;
 }
-.serviços{
+.serviços {
     display: flex;
+    /* margin:5px 10px 5px 10px; */
+    flex-direction: row;
 }
-.serviço{
-
+.serviço {
     margin: 8px;
-    border-style: solid;
-    border-color: rgb(7, 7, 7);
-    background-color: rgb(133, 99, 228);
-
+    background-color: rgb(12, 163, 218);
+    opacity: 0.7;
 }
 .button {
     border-color: rgb(7, 7, 7);
@@ -170,17 +168,16 @@ body {
     border-radius: 5px;
 }
 h3 {
-    margin: 10px 350px;
-    /* letter-spacing: 4px; */
+    margin: 10px 250px;
     word-spacing: 30px;
     padding: 20px;
 }
 form ul {
-    padding: 5px 10px 5px 200px;
-    /* height: auto; */
+    padding: 5px 10px 5px 100px;
+    /* display: flex; */
 }
 footer {
-    background: #847dc7;
+    background: #b87dc7;
 }
 
 .visualiza-serviço {
@@ -193,9 +190,11 @@ footer {
 .serviço {
     padding: 5px;
     margin: 10px;
-    border-style: solid;
-    border-color: rgb(0, 0, 0);
-    background-color: rgb(99, 108, 228);
+    background-color: rgb(12, 163, 218);
     width: 80px;
     cursor: pointer;
+}
+.columns {
+    display: flex;
+    flex-direction: column;
 }
