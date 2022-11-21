@@ -9,31 +9,34 @@
         <title>Document</title>
     </head>
     <main>
-        <section>
-            <div>
-                <body>
+        <div id="cookies"></div>
+
+        <div id="login">
+            <form class="card" onsubmit="return false">
+                <div class="card-header">
+                    <h2>Login</h2>
+                </div>
+                <div class="card-content">
+                    <div class="card-content-area">
+                        <label for="usuario">Usuário</label>
+                        <input type="text" id="usuario" autocomplete="off" />
+                    </div>
+
+                    <div class="card-content-area">
+                        <label for="senha">Senha</label>
+                        <input type="password" id="senha" autocomplete="off" />
+                    </div>
+                </div>
+
+                <div class="card-footer">
                     <input
-                        type="text"
-                        class="entrada"
-                        id="usuario"
-                        placeholder="E-mail"
-                    />
-                    <input
-                        type="text"
-                        class="entrada"
-                        id="senha"
-                        placeholder="Senha"
-                    />
-                    <input
-                        type="button"
-                        class="enviar"
-                        value="Enviar"
+                        type="submit"
+                        value="login"
+                        class="submit"
                         onclick="autorizarIntrutor()"
                     />
-                </body>
-                <h1 id="noAutoriza"></h1>
-            </div>
-            <a href="pesquisaBD.html"></a>
-        </section>
+                </div>
+            </form>
+        </div>
     </main>
 </html>
