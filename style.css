@@ -15,11 +15,11 @@ input[type="submit"] {
     border-radius: 10px;
 }
 input[type="submit"]:hover {
-    background: #4ee640;
+    background: #8f0c0c;
     color: rgb(8, 15, 6);
 }
 input[type="button"] {
-    background: #8f0c0c;
+    background: rgb(255, 0, 0);
     color: rgb(240, 230, 230);
     cursor: pointer;
     border-radius: 10px;
@@ -126,7 +126,7 @@ div ol img {
     border-color: rgb(7, 6, 6);
 }
 .enviar {
-    background-color: #973c3c;
+    background-color: rgb(255, 0, 0);
     border-color: rgb(7, 6, 6);
     margin: 5px;
     padding: 5px;
