@@ -153,49 +153,4 @@ function preenchaServico(servicoBD, servicoId) {
     }
 }
 
-function PesquisaBD() {
-    let nome = document.getElementById("bd").value;
-    bd.transaction(function (ler) {
-        ler.executeSql(
-            `SELECT * FROM clientes WHERE nome = "${nome}"`,
 
-            [],
-            function (ler, results) {
-                var len = results.rows.length,
-                    i;
-                msg = "<p>Found rows: " + len + "<p/>";
-                document.getElementById("resposta").innerHTML += msg;
-
-                for (let i = 0; i < len; i++) {
-                    document.getElementById("resposta").innerHTML =
-                        results.rows.item(i).nome +
-                        " " +
-                        results.rows.item(i).telefone +
-                        " " +
-                        results.rows.item(i).email;
-
-                    for (let j = 0; j < 16; j++) {
-                        preenchaSemana(
-                            results.rows.item(i)[listaPeriodosBd[j]],
-                            listaPeriodosId[j] + "-exibe"
-                        );
-                    }
-                    for (let m = 0; m < 8; m++) {
-                        preenchaServico(
-                            results.rows.item(i)[listaServicosBd[m]],
-                            listaServicosId[m] + "-exibe"
-                        );
-                    }
-                    // preenchaSemana(results.rows.item(i).segundaManha);
-                    // preenchaServico(results.rows.item(i).botaoEscova);
-                }
-                console.log(results.rows);
-                console.log(listaPeriodosId);
-                console.log(listaPeriodosBd);
-                console.log(listaServicosBd);
-                console.log(listaServicosId);
-            },
-            null
-        );
-    });
-}

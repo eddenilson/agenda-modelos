@@ -17,21 +17,24 @@
         </header>
         <div id="wrap">
             <ul>
-            <input
+                
+                <input
                 type="text"
                 class="entrada"
                 id="bd"
-                placeholder="Nome"
+                placeholder="Pesquisa por nome"
                 />
                 
                 <input type="submit" value="Pesquisar" onclick="PesquisaBD()" />
                 
                 <br />
+                <h2 class="indiceBd">Dias da semana</h2>
                 
-                <h2 id="resposta"></h2>
-                
-                <section class="visualiza-semana">
-                    <div class="dia-semana">
+
+            <h2 id="resposta"></h2>
+
+            <section class="visualiza-semana">
+                <div class="dia-semana">
                     <div class="info"></div>
                     <strong
                     ><div class="info">Manhã</div>
@@ -75,6 +78,10 @@
                     <div class="info periodo" id="sab-m-exibe"></div>
                 </div>
                 <br />
+                
+                <ul><h2 class="indiceBd">Serviços</h2></ul>
+               
+                <br />
                 <section class="serviços">
                     <div class="info serviço" id="botaoEscova-exibe">
                         Escova
@@ -115,14 +122,13 @@
                 </section>
             </section>
         </div>
-        <header>
-            <!-- <img src="imagemFundo.webp"class="imagem"> -->
-        </header>
+        
+      
         <div id="wrap">
             <main>
                 <div class="columns">
                     <div class="column">
-                        <ul><h1>Pesquisar por dia</h1></ul>
+                        <ul><h2 class="indiceBd">Dias da semana</h2></ul>
                         <section class="visualiza-semana">
                             <div class="dia-semana">
                                 <div class="info"></div>
@@ -131,11 +137,11 @@
                                     ><div class="info">Manhã</div>
                                     <div class="info">Tarde</div>
                                     <div class="info">Noite</div></strong
-                                    >
-                                </div>
-                                
-                                <div class="dia-semana">
-                                    <div>Seg</div>
+                                >
+                            </div>
+                            
+                            <div class="dia-semana">
+                                <div>Seg</div>
                                 <div
                                     class="info periodo"
                                     id="seg-m"
@@ -233,7 +239,7 @@
                                 ></div>
                             </div>
                         </section>
-                        <ul><h1>Pesquisar por serviços</h1></ul>
+                        <ul><h2 class="indiceBd">Serviços</h2></ul>
                         <section class="serviços">
                             <div
                                 class="info serviço"

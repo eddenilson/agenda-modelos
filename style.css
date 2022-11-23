@@ -3,7 +3,7 @@ header {
     justify-content: space-around;
     color: blue;
     margin: 40px 5px 10px 5px;
-    background: rgb(241, 223, 190);
+    background: white;
 }
 h1 a {
     margin: 0px 0px 0px 200px;
@@ -29,7 +29,7 @@ input[type="button"]:hover {
     color: rgb(8, 15, 6);
 }
 .cadastre {
-    padding: 5px 50px 5px 470px;
+    padding: 5px 50px 5px 610px;
     color: rgb(3, 3, 3);
 }
 h2 :hover {
@@ -37,7 +37,7 @@ h2 :hover {
 }
 
 .titulo {
-    padding: 10px 10px 0px 450px;
+    padding: 10px 10px 0px 580px;
 }
 .imagem {
     height: 100px;
@@ -56,7 +56,7 @@ h2 :hover {
 }
 body {
     font-family: Helvetica, sans-serif;
-    background: rgb(241, 223, 190);
+    background: white;
 }
 
 input[type="submit"] {
@@ -139,7 +139,6 @@ div ol img {
 .info {
     padding: 10px;
 }
-
 
 .periodo {
     margin: 8px;
