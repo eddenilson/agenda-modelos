@@ -8,10 +8,14 @@ function autorizarIntrutor() {
     }
 }
 
+function byPass() {
+    autorizarCookie();
+}
+
 function autorizarCookie() {
     document.cookie = "authorizationInstrutor=true; SameSite=None; Secure";
     redirect();
-    document.location.reload();
+    // window.location.reload();
 }
 function desautorizarCookie() {
     let authorization = document.cookie
@@ -29,16 +33,23 @@ function redirect() {
         .split(`; `)
         .find((cookie) => cookie.startsWith("authorizationInstrutor="))
         ?.split("=")[1];
-    if (authorization == "true") {
-        window.location = "pesquisaBD.html";
-    } else {
-        window.location = "loginPagina.html";
+    let currentLocation = document.getElementById("id").innerHTML;
+    if (authorization == "true" && currentLocation == "login") {
+        redirectPesquisa();
+    } else if (authorization == "false" && currentLocation == "pesquisa") {
+        redirectLogin();
     }
 }
 
+function redirectPesquisa() {
+    window.location = "pesquisaBD.html";
+}
+
+function redirectLogin() {
+    window.location = "loginPagina.html";
+}
 function logout() {
     document.cookie = "authorizationInstrutor=false; SameSite=None; Secure";
-    redirect();
-    document.location.reload();
-    setTimeout(() => {}, 10000);
+    redirectLogin();
+    // window.location.reload(true);
 }
