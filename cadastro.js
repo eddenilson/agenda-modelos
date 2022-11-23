@@ -2,7 +2,7 @@ var bd = openDatabase("myA", "1.0", "Minha agenda", 4080);
 var listaDias = [];
 let corMarcada = "rgb(69, 191, 24)";
 
-let corDesmarcada =  "rgb(12, 163, 218)";
+let corDesmarcada = "rgb(12, 163, 218)";
 listaPeriodosBd = [
     "segundaManha",
     "segundaTarde",
