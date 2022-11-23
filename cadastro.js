@@ -2,7 +2,7 @@ var bd = openDatabase("myA", "1.0", "Minha agenda", 4080);
 var listaDias = [];
 let corMarcada = "rgb(69, 191, 24)";
 
-let corDesmarcada = "red";
+let corDesmarcada = "rgb(12, 163, 218)";
 listaPeriodosBd = [
     "segundaManha",
     "segundaTarde",
@@ -138,9 +138,9 @@ function preenchaSemana(periodoBD, periodoId) {
     console.log(periodoBD, periodoId);
     const periodoBox = document.getElementById(periodoId);
     if (periodoBD == "false") {
-        periodoBox.style.backgroundColor = corDesmarcada;
+        periodoBox.style.backgroundColor = "rgb(52, 27, 217)";
     } else {
-        periodoBox.style.backgroundColor = corMarcada;
+        periodoBox.style.backgroundColor = "#45bf18";
     }
 }
 function preenchaServico(servicoBD, servicoId) {

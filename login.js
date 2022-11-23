@@ -40,5 +40,5 @@ function logout() {
     document.cookie = "authorizationInstrutor=false; SameSite=None; Secure";
     redirect();
     document.location.reload();
-    setTimeout(() => {}, 1000);
+    setTimeout(() => {}, 10000);
 }
