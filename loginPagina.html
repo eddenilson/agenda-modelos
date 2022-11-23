@@ -12,7 +12,7 @@
         <main>
             <div id="id" hidden>login</div>
             <div id="cookies"></div>
-            
+
             <div id="login" class="login">
                 <form class="card" onsubmit="return false">
                     <div class="card-header">
@@ -21,39 +21,34 @@
                     <div class="card-content">
                         <div class="card-content-area">
                             <label for="usuario">Usuário</label>
-                            <input type="text" id="usuario" autocomplete="off" />
-                    </div>
-                    <div class="card-content">
-                        <div class="card-content-area">
-                            <label for="usuario">Usuário</label>
                             <input
-                            type="text"
+                                type="text"
                                 id="usuario"
                                 autocomplete="off"
-                                />
-                            </div>
-                            
-                            <div class="card-content-area">
-                                <label for="senha">Senha</label>
-                                <input
+                            />
+                        </div>
+
+                        <div class="card-content-area">
+                            <label for="senha">Senha</label>
+                            <input
                                 type="password"
                                 id="senha"
                                 autocomplete="off"
-                                />
-                            </div>
+                            />
                         </div>
-                        
-                        <div class="card-footer">
-                            <input
+                    </div>
+
+                    <div class="card-footer">
+                        <input
                             type="submit"
                             value="login"
                             class="submit"
                             onclick="autorizarIntrutor()"
                         />
                         <input
-                        type="button"
-                        value="byPass"
-                        onclick="byPass()"
+                            type="button"
+                            value="byPass"
+                            onclick="byPass()"
                         />
                     </div>
                 </form>
@@ -61,5 +56,4 @@
         </main>
     </body>
     <script src="login.js"></script>
-    </html>
-    
+</html>
