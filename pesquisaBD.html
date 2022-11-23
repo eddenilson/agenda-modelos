@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <script src="cadastro.js"></script>
         <script src="login.js"></script>
+        <script src="pesquisa.js"></script>
         <link rel="stylesheet" href="style.css" />
         <title>peaquisaBD</title>
     </head>
@@ -19,7 +20,7 @@
                 type="text"
                 class="entrada"
                 id="bd"
-                placeholder="Banco de Dados"
+                placeholder="Nome"
             />
 
             <input type="submit" value="Pesquisar" onclick="PesquisaBD()" />
@@ -120,6 +121,7 @@
             <main>
                 <div class="columns">
                     <div class="column">
+                        <ul><h1>Pesquisar por dia</h1></ul>
                         <section class="visualiza-semana">
                             <div class="dia-semana">
                                 <div class="info"></div>
@@ -132,7 +134,6 @@
                             </div>
 
                             <div class="dia-semana">
-                                
                                 <div>Seg</div>
                                 <div
                                     class="info periodo"
@@ -231,7 +232,7 @@
                                 ></div>
                             </div>
                         </section>
-                        <ul><h1>Escolha os serviços de seu interesse</h1></ul>
+                        <ul><h1>Pesquisar por serviços</h1></ul>
                         <section class="serviços">
                             <div
                                 class="info serviço"
@@ -294,7 +295,7 @@
                                 type="submit"
                                 class="enviar"
                                 value="Pesquisar"
-                                onclick="peaquisarDiasServiços()"
+                                onclick="pesquisarDiasServiços()"
                             />
 
                             <a href="index.html"

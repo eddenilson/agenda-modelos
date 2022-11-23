@@ -149,7 +149,6 @@ div ol img {
 }
 .serviços {
     display: flex;
-    /* margin:5px 10px 5px 10px; */
     flex-direction: row;
 }
 .serviço {
