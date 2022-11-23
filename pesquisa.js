@@ -38,7 +38,7 @@ function PesquisaBD() {
     });
 }
 
-function peaquisarDiasServiços() {
+function pesquisarDiasServiços() {
     bd.transaction(function (pesquisar) {
         pesquisar.executeSql(
             "SELECT * FROM clientes",

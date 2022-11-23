@@ -1,0 +1,13 @@
+.login {
+    /* display: flex; */
+    box-shadow: 5px 5px 5px 5px #ccc;
+    /* align-items: center; */
+    border-radius: 5px;
+}
+main {
+    display: flex;
+    width: 500px;
+    height: 300px;
+    margin: 100px 750px;
+    /* color: rgb(255, 255, 255); */
+}
