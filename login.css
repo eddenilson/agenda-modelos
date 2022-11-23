@@ -1,13 +1,29 @@
 .login {
     /* display: flex; */
-    box-shadow: 5px 5px 5px 5px #ccc;
+    box-shadow: 5px 5px 5px 5px;
+    color: rgb(26, 99, 194);
+    
     /* align-items: center; */
     border-radius: 5px;
 }
 main {
-    display: flex;
-    width: 500px;
+    /* display: flex; */
+    width: 350px;
     height: 300px;
-    margin: 100px 750px;
+    margin: 20px 485px;
     /* color: rgb(255, 255, 255); */
 }
+.tituloLogin {
+    margin: 5px 135px;
+}
+.card-content-area {
+    margin: 15px 60px;
+}    
+.card-footer {
+    margin: 5px 30px;
+}    
+.byPass{
+    width: 50px;
+    height: 20px;
+    margin: 0px 0px 10px 110px;
+}                                                      
