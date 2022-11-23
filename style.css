@@ -3,7 +3,7 @@ header {
     justify-content: space-around;
     color: blue;
     margin: 40px 5px 10px 5px;
-    background: rgb(241, 223, 190);
+    background: white;
 }
 h1 a {
     margin: 0px 0px 0px 200px;
@@ -56,7 +56,7 @@ h2 :hover {
 }
 body {
     font-family: Helvetica, sans-serif;
-    background: rgb(241, 223, 190);
+    background: white;
 }
 
 input[type="submit"] {
@@ -139,7 +139,6 @@ div ol img {
 .info {
     padding: 10px;
 }
-
 
 .periodo {
     margin: 8px;

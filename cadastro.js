@@ -2,7 +2,7 @@ var bd = openDatabase("myA", "1.0", "Minha agenda", 4080);
 var listaDias = [];
 let corMarcada = "rgb(69, 191, 24)";
 
-let corDesmarcada = "red";
+let corDesmarcada =  "rgb(12, 163, 218)";
 listaPeriodosBd = [
     "segundaManha",
     "segundaTarde",
@@ -138,9 +138,9 @@ function preenchaSemana(periodoBD, periodoId) {
     console.log(periodoBD, periodoId);
     const periodoBox = document.getElementById(periodoId);
     if (periodoBD == "false") {
-        periodoBox.style.backgroundColor = corDesmarcada;
+        periodoBox.style.backgroundColor = "rgb(52, 27, 217)";
     } else {
-        periodoBox.style.backgroundColor = corMarcada;
+        periodoBox.style.backgroundColor = "#45bf18";
     }
 }
 function preenchaServico(servicoBD, servicoId) {
@@ -153,49 +153,4 @@ function preenchaServico(servicoBD, servicoId) {
     }
 }
 
-function PesquisaBD() {
-    let nome = document.getElementById("bd").value;
-    bd.transaction(function (ler) {
-        ler.executeSql(
-            `SELECT * FROM clientes WHERE nome = "${nome}"`,
 
-            [],
-            function (ler, results) {
-                var len = results.rows.length,
-                    i;
-                msg = "<p>Found rows: " + len + "<p/>";
-                document.getElementById("resposta").innerHTML += msg;
-
-                for (let i = 0; i < len; i++) {
-                    document.getElementById("resposta").innerHTML =
-                        results.rows.item(i).nome +
-                        " " +
-                        results.rows.item(i).telefone +
-                        " " +
-                        results.rows.item(i).email;
-
-                    for (let j = 0; j < 16; j++) {
-                        preenchaSemana(
-                            results.rows.item(i)[listaPeriodosBd[j]],
-                            listaPeriodosId[j] + "-exibe"
-                        );
-                    }
-                    for (let m = 0; m < 8; m++) {
-                        preenchaServico(
-                            results.rows.item(i)[listaServicosBd[m]],
-                            listaServicosId[m] + "-exibe"
-                        );
-                    }
-                    // preenchaSemana(results.rows.item(i).segundaManha);
-                    // preenchaServico(results.rows.item(i).botaoEscova);
-                }
-                console.log(results.rows);
-                console.log(listaPeriodosId);
-                console.log(listaPeriodosBd);
-                console.log(listaServicosBd);
-                console.log(listaServicosId);
-            },
-            null
-        );
-    });
-}
