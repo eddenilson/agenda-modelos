@@ -196,3 +196,14 @@ footer {
     display: flex;
     flex-direction: column;
 }
+
+#resposta-ocorrencias {
+    -ms-grid-column-align: start;
+    padding: 5px;
+    margin: 15px;
+    border-radius: 5px;
+    border-style: solid;
+    box-shadow: 5px 5px 5px;
+    background-color: whitesmoke;
+    cursor: pointer;
+}

@@ -8,10 +8,6 @@ function autorizarIntrutor() {
     }
 }
 
-function byPass() {
-    autorizarCookie();
-}
-
 function autorizarCookie() {
     document.cookie = "authorizationInstrutor=true; SameSite=None; Secure";
     redirect();
@@ -51,5 +47,4 @@ function redirectLogin() {
 function logout() {
     document.cookie = "authorizationInstrutor=false; SameSite=None; Secure";
     redirectLogin();
-    // window.location.reload(true);
 }
