@@ -6,17 +6,18 @@
     /* align-items: center; */
     border-radius: 5px;
 }
-main {
+body {
     /* display: flex; */
     width: 350px;
     height: 300px;
-    margin: 20px 485px;
+    margin: 20px 745px;
     /* color: rgb(255, 255, 255); */
 }
 .tituloLogin {
     margin: 5px 135px;
 }
-.card-content-area {
+.card-content-area {    
+    
     margin: 15px 60px;
 }    
 .card-footer {
@@ -26,4 +27,5 @@ main {
     width: 50px;
     height: 20px;
     margin: 0px 0px 10px 110px;
-}                                                      
+}   
+                 

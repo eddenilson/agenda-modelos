@@ -38,10 +38,11 @@ h2 :hover {
 
 .titulo {
     padding-left:200px ;
+    
     /* background: white; */
     /* color: blue; */
     right: 10px;
-    margin:  10px 105px 
+    margin:  10px 450px 
 }
 .imagem {
     
@@ -72,7 +73,7 @@ input[type="submit"] {
     background: rgb(12, 163, 218);
     color: white;
     cursor: pointer;
-    margin: 0px 10px 10px 15px;
+    margin: 20px 10px 10px 15px;
     width: 250px;
     height: 25px;
 }

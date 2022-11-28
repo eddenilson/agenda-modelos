@@ -83,3 +83,4 @@ function exibePessoaSelecionada(nome){
     document.getElementById("bd").value=nome
     PesquisaBD()
 }
+// function periodoBdNomeEmail()
