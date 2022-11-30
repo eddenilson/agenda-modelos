@@ -29,7 +29,7 @@ input[type="button"]:hover {
     color: rgb(8, 15, 6);
 }
 .cadastre {
-    padding: 5px 50px 5px 610px;
+    padding: 5px 50px 5px 370px;
     color: rgb(3, 3, 3);
 }
 h2 :hover {
@@ -37,12 +37,12 @@ h2 :hover {
 }
 
 .titulo {
-    padding-left:200px ;
+    /* padding-left:200px ; */
     
     /* background: white; */
     /* color: blue; */
     right: 10px;
-    margin:  10px 450px 
+    margin:  10px 410px 
 }
 .imagem {
     
@@ -99,9 +99,12 @@ a input[type="button"]:hover {
 }
 
 #wrap {
-    /* width: 400px; */
-    margin: 0px 200px 0px 200px;
-    background: linear-gradient(rgb(166, 200, 251), rgb(243, 176, 105));
+    box-shadow: 5px 5px 5px 5px;
+    color: rgb(26, 99, 194);
+    border-radius: 10px;
+    width: 1000px;
+    margin: 0px 200px 0px 440px;
+    /* background: linear-gradient(rgb(166, 200, 251), rgb(243, 176, 105)); */
 }
 div ol img {
     margin: 20px 0px;
