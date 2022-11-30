@@ -153,4 +153,10 @@ function preenchaServico(servicoBD, servicoId) {
     }
 }
 
+function avançaCadastro() {
+    window.location = "Cadastro.html";
+}
 
+function avançaLoginPagina() {
+    window.location = "loginPagina.html";
+}
