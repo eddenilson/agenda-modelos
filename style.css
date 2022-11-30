@@ -29,7 +29,7 @@ input[type="button"]:hover {
     color: rgb(8, 15, 6);
 }
 .cadastre {
-    padding: 5px 50px 5px 610px;
+    padding: 5px 50px 5px 370px;
     color: rgb(3, 3, 3);
 }
 h2 :hover {
@@ -37,21 +37,31 @@ h2 :hover {
 }
 
 .titulo {
-    padding: 10px 10px 0px 580px;
+    /* padding-left:200px ; */
+    
+    /* background: white; */
+    /* color: blue; */
+    right: 10px;
+    margin:  10px 410px 
 }
 .imagem {
+    
     height: 100px;
     margin: 0px 0px;
 }
 .imagens-inicio {
-    display: flex;
-    flex-direction: row;
+    /* background: #a5a331; */
+    padding-left: 80px;
+    /* display: flex; */
+    word-spacing: 80px;
+    /* flex-direction: row; */
 }
 
 .imagem-inicio {
+    
     max-height: 200px;
-    width: auto;
-    height: auto;
+    width: 300px;
+    height: 200px;
     margin: 20px;
 }
 body {
@@ -63,9 +73,9 @@ input[type="submit"] {
     background: rgb(12, 163, 218);
     color: white;
     cursor: pointer;
-    margin: 15px;
-    width: 300px;
-    height: 30px;
+    margin: 20px 10px 10px 15px;
+    width: 250px;
+    height: 25px;
 }
 input[type="submit"]:hover {
     color: #000000;
@@ -89,19 +99,23 @@ a input[type="button"]:hover {
 }
 
 #wrap {
-    margin: 0px 200px 0px 200px;
-    background: linear-gradient(rgb(166, 200, 251), rgb(243, 176, 105));
+    box-shadow: 5px 5px 5px 5px;
+    color: rgb(26, 99, 194);
+    border-radius: 10px;
+    width: 1000px;
+    margin: 0px 200px 0px 440px;
+    /* background: linear-gradient(rgb(166, 200, 251), rgb(243, 176, 105)); */
 }
 div ol img {
     margin: 20px 0px;
 }
 
-.main {
-    display: flex;
+/* .main { */
+    /* display: flex;
     flex-direction: row;
     justify-content: center;
     background-color: #cf2828;
-}
+} */
 
 .visualiza-semana {
     display: grid;
@@ -147,6 +161,7 @@ div ol img {
     cursor: pointer;
 }
 .serviços {
+    width: 600px;    
     display: flex;
     flex-direction: row;
 }
@@ -166,6 +181,7 @@ div ol img {
     border-radius: 5px;
 }
 h3 {
+    
     margin: 10px 250px;
     word-spacing: 30px;
     padding: 20px;
