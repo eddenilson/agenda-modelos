@@ -223,3 +223,13 @@ footer {
     background-color: whitesmoke;
     cursor: pointer;
 }
+
+.sub-titulo {
+    display: flex;
+    justify-content: center;
+}
+
+.pos-titulo {
+    display: flex;
+    justify-content:flex-start;
+}
