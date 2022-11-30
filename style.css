@@ -8,6 +8,14 @@ header {
 h1 a {
     margin: 0px 0px 0px 200px;
 }
+#botaoLogin {
+    background: rgb(255, 255, 255);
+    /* border-radius: 10px; */
+
+
+/* width: 30px; */
+/* height: 15px; */
+}
 input[type="submit"] {
     background: #8f0c0c;
     color: rgb(240, 230, 230);
