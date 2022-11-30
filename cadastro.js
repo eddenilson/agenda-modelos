@@ -157,6 +157,6 @@ function avançaCadastro() {
     window.location = "Cadastro.html";
 }
 
-function avançaLoginPagina() {
+function avancaLoginPagina() {
     window.location = "loginPagina.html";
 }
