@@ -63,7 +63,7 @@ h2 :hover {
 .imagem {
     
     height: 100px;
-    margin: 0px 0px;
+    /* margin: 0px 0px; */
 }
 .imagens-inicio {
     /* background: #a5a331; */
@@ -84,6 +84,12 @@ body {
     font-family: Helvetica, sans-serif;
     background: white;
 }
+.paginaInicio {
+    display: flex;
+    justify-content: center;
+
+}
+
 
 input[type="submit"] {
     background: rgb(12, 163, 218);
@@ -119,25 +125,21 @@ a input[type="button"]:hover {
     color: rgb(26, 99, 194);
     border-radius: 10px;
     width: 1000px;
-    margin: 0px 200px 0px 440px;
-    /* background: linear-gradient(rgb(166, 200, 251), rgb(243, 176, 105)); */
+    
+    
 }
 div ol img {
     margin: 20px 0px;
 }
 
-/* .main { */
-    /* display: flex;
-    flex-direction: row;
-    justify-content: center;
-    background-color: #cf2828;
-} */
 
 .visualiza-semana {
     display: grid;
     grid: 1fr / repeat(8, 1px);
     grid-column-gap: 80px;
     margin: 30px;
+    
+    
 }
 
 .dia-semana {
