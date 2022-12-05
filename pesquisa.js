@@ -3,7 +3,6 @@ function PesquisaBD() {
     bd.transaction(function (ler) {
         ler.executeSql(
             `SELECT * FROM clientes WHERE nome = "${nome}"`,
-
             [],
             function (ler, results) {
                 var len = results.rows.length,
@@ -79,8 +78,8 @@ function pesquisarDiasServiços() {
         );
     });
 }
-function exibePessoaSelecionada(nome){
-    document.getElementById("bd").value=nome
-    PesquisaBD()
+
+function exibePessoaSelecionada(nome) {
+    document.getElementById("bd").value = nome;
+    PesquisaBD();
 }
-// function periodoBdNomeEmail()

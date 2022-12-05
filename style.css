@@ -3,7 +3,7 @@ header {
     justify-content: space-around;
     color: blue;
     margin: 40px 5px 10px 5px;
-    background: white;
+    background: whitesmoke;
 }
 h1 a {
     margin: 0px 0px 0px 200px;
@@ -38,14 +38,13 @@ h2 :hover {
 
 .titulo {
     /* padding-left:200px ; */
-    
+
     /* background: white; */
     /* color: blue; */
     right: 10px;
-    margin:  10px 410px 
+    margin: 10px 410px;
 }
 .imagem {
-    
     height: 100px;
     margin: 0px 0px;
 }
@@ -58,7 +57,6 @@ h2 :hover {
 }
 
 .imagem-inicio {
-    
     max-height: 200px;
     width: 300px;
     height: 200px;
@@ -66,7 +64,7 @@ h2 :hover {
 }
 body {
     font-family: Helvetica, sans-serif;
-    background: white;
+    background: whitesmoke;
 }
 
 input[type="submit"] {
@@ -111,7 +109,7 @@ div ol img {
 }
 
 /* .main { */
-    /* display: flex;
+/* display: flex;
     flex-direction: row;
     justify-content: center;
     background-color: #cf2828;
@@ -161,13 +159,13 @@ div ol img {
     cursor: pointer;
 }
 .serviços {
-    width: 600px;    
+    width: 600px;
     display: flex;
     flex-direction: row;
 }
 .serviço {
     margin: 8px;
-    background-color: rgb(12, 163, 218);
+    background-color: #157f9a;
     opacity: 0.7;
 }
 .button {
@@ -181,7 +179,6 @@ div ol img {
     border-radius: 5px;
 }
 h3 {
-    
     margin: 10px 250px;
     word-spacing: 30px;
     padding: 20px;
@@ -204,9 +201,10 @@ footer {
 .serviço {
     padding: 5px;
     margin: 10px;
-    background-color: rgb(12, 163, 218);
+    background-color: #18a0d6;
     width: 80px;
     cursor: pointer;
+    color: white;
 }
 .columns {
     display: flex;
@@ -229,7 +227,7 @@ footer {
     justify-content: center;
 }
 
-.pos-titulo {
-    display: flex;
-    justify-content:flex-start;
+.section {
+    background-color: white;
+    border-radius: 10px;
 }
