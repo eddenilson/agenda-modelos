@@ -154,7 +154,7 @@ function preenchaServico(servicoBD, servicoId) {
 }
 
 function avançaCadastro() {
-    window.location = "Cadastro.html";
+    window.location = "cadastro.html";
 }
 
 function avancaLoginPagina() {
