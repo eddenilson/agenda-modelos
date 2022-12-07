@@ -76,7 +76,6 @@ input[type="submit"] {
     background: rgb(12, 163, 218);
     color: white;
     cursor: pointer;
-    margin: 20px 10px 10px 15px;
     width: 250px;
     height: 25px;
 }
@@ -84,10 +83,45 @@ input[type="submit"]:hover {
     color: #000000;
     background: #159abb;
 }
-input[type="submit"]:focus {
+/* input[type="submit"]: {
     color: #000000;
-    background: #157f9a;
+    background: rgb(12, 163, 218);
+-webkit-animation: animation 1s ease-in-out;
+    -moz-animation: animation 1s ease-in-out;
+} */
+input[type="submit"]:focus {
+    animation: uncolor 0.2s ease-in-out forwards;
+    animation-duration: 1s;
 }
+*: focus {
+    outline: 0;
+}
+@keyframes uncolor {
+    0% {
+        background: #157f9a;
+    }
+    100% {
+        background: rgb(12, 163, 218);
+    }
+}
+ /* @-webkit-keyframes animation {
+    0% {
+        background: #157f9a;
+    }
+    100% {
+        background: rgb(12, 163, 218);
+    }
+}
+
+@-moz-keyframes animation {
+    0% {
+        background: #157f9a;
+    }
+    100% {
+        background: rgb(12, 163, 218);
+    }
+} */
+
 a input[type="button"] {
     background: rgb(255, 0, 0);
     color: rgb(255, 255, 255);
@@ -137,7 +171,7 @@ div ol img {
 .enviar {
     background-color: rgb(255, 0, 0);
     border-color: rgb(7, 6, 6);
-    margin: 5px;
+    margin: 17px 5px;
     padding: 5px;
     width: 400px;
     align-items: center;
@@ -183,7 +217,6 @@ h3 {
 }
 form ul {
     padding: 5px 10px 5px 100px;
-    /* display: flex; */
 }
 footer {
     background: #b87dc7;
@@ -228,5 +261,5 @@ footer {
 .loginBotao {
     display: flex;
     justify-content: center;
+    cursor: pointer;
 }
-enviar
