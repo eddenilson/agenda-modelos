@@ -52,29 +52,18 @@ h2 :hover {
     text-decoration: underline;
 }
 
-.titulo {
-    /* padding-left:200px ; */
-    
-    /* background: white; */
-    /* color: blue; */
+.titulo {   
     right: 10px;
     margin:  10px 410px 
 }
-.imagem {
-    
-    height: 100px;
-    /* margin: 0px 0px; */
+.imagem {    
+    height: 100px;   
 }
-.imagens-inicio {
-    /* background: #a5a331; */
-    padding-left: 80px;
-    /* display: flex; */
+.imagens-inicio {    
+    padding-left: 80px;   
     word-spacing: 80px;
-    /* flex-direction: row; */
 }
-
-.imagem-inicio {
-    
+.imagem-inicio {    
     max-height: 200px;
     width: 300px;
     height: 200px;
@@ -87,10 +76,7 @@ body {
 .paginaInicio {
     display: flex;
     justify-content: center;
-
 }
-
-
 input[type="submit"] {
     background: rgb(12, 163, 218);
     color: white;
@@ -124,21 +110,17 @@ a input[type="button"]:hover {
     box-shadow: 5px 5px 5px 5px;
     color: rgb(26, 99, 194);
     border-radius: 10px;
-    width: 1000px;
-    
-    
+    width: 1000px;      
 }
 div ol img {
     margin: 20px 0px;
 }
 
-
 .visualiza-semana {
     display: grid;
     grid: 1fr / repeat(8, 1px);
     grid-column-gap: 80px;
-    margin: 30px;
-    
+    margin: 30px; 
     
 }
 
@@ -207,7 +189,6 @@ h3 {
 }
 form ul {
     padding: 5px 10px 5px 100px;
-    /* display: flex; */
 }
 footer {
     background: #b87dc7;
