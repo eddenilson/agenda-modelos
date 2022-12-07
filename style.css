@@ -3,26 +3,20 @@ header {
     justify-content: space-around;
     color: blue;
     margin: 40px 5px 10px 5px;
-    background: white;
+    background: whitesmoke;
 }
 h1 a {
     margin: 0px 0px 0px 200px;
 }
 #botaoLogin {
     box-shadow: 2px 2px 2px 2px;
-    
     color: rgb(26, 99, 194);
-    border-color: rgb(26, 99, 194) ;    
+    border-color: rgb(26, 99, 194);
     background: white;
     width: 40px;
     height: 20px;
     border-radius: 5px;
     margin: 0px 0px 0px 1400px;
-
-
-
-/* width: 30px; */
-/* height: 15px; */
 }
 input[type="submit"] {
     background: #8f0c0c;
@@ -52,18 +46,19 @@ h2 :hover {
     text-decoration: underline;
 }
 
-.titulo {   
+.titulo {
     right: 10px;
-    margin:  10px 410px 
+    margin: 10px 410px;
 }
-.imagem {    
-    height: 100px;   
+.imagem {
+    height: 100px;
 }
-.imagens-inicio {    
-    padding-left: 80px;   
+.imagens-inicio {
+    padding-left: 80px;
     word-spacing: 80px;
 }
-.imagem-inicio {    
+
+.imagem-inicio {
     max-height: 200px;
     width: 300px;
     height: 200px;
@@ -71,7 +66,7 @@ h2 :hover {
 }
 body {
     font-family: Helvetica, sans-serif;
-    background: white;
+    background: whitesmoke;
 }
 .paginaInicio {
     display: flex;
@@ -110,7 +105,8 @@ a input[type="button"]:hover {
     box-shadow: 5px 5px 5px 5px;
     color: rgb(26, 99, 194);
     border-radius: 10px;
-    width: 1000px;      
+    width: 1000px;
+    background-color: white;
 }
 div ol img {
     margin: 20px 0px;
@@ -120,8 +116,7 @@ div ol img {
     display: grid;
     grid: 1fr / repeat(8, 1px);
     grid-column-gap: 80px;
-    margin: 30px; 
-    
+    margin: 30px;
 }
 
 .dia-semana {
@@ -161,13 +156,13 @@ div ol img {
     cursor: pointer;
 }
 .serviços {
-    width: 600px;    
+    width: 600px;
     display: flex;
     flex-direction: row;
 }
 .serviço {
     margin: 8px;
-    background-color: rgb(12, 163, 218);
+    background-color: #157f9a;
     opacity: 0.7;
     color: white;
 }
@@ -182,7 +177,6 @@ div ol img {
     border-radius: 5px;
 }
 h3 {
-    
     margin: 10px 250px;
     word-spacing: 30px;
     padding: 20px;
@@ -204,9 +198,10 @@ footer {
 .serviço {
     padding: 5px;
     margin: 10px;
-    background-color: rgb(12, 163, 218);
+    background-color: #18a0d6;
     width: 80px;
     cursor: pointer;
+    color: white;
 }
 .columns {
     display: flex;
@@ -222,4 +217,9 @@ footer {
     box-shadow: 5px 5px 5px;
     background-color: whitesmoke;
     cursor: pointer;
+}
+
+.sub-titulo {
+    display: flex;
+    justify-content: center;
 }
