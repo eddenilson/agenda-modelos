@@ -11,12 +11,11 @@ function PesquisaBD() {
                 document.getElementById("resposta").innerHTML += msg;
 
                 for (let i = 0; i < len; i++) {
-                    document.getElementById("resposta").innerHTML =
-                        results.rows.item(i).nome +
-                        " " +
-                        results.rows.item(i).telefone +
-                        " " +
-                        results.rows.item(i).email;
+                    exibeInfos(
+                        results.rows.item(i).nome,
+                        results.rows.item(i).telefone,
+                        results.rows.item(i).email
+                    );
 
                     for (let j = 0; j < 16; j++) {
                         preenchaSemana(
@@ -71,15 +70,54 @@ function pesquisarDiasServiços() {
                     if (clienteCorresponde) {
                         document.getElementById(
                             "resposta-ocorrencias"
-                        ).innerHTML += `<p onclick="exibePessoaSelecionada('${item.nome}')">nome: ${item.nome}, telefone: ${item.telefone}, email: ${item.email}</p>`;
+                        ).innerHTML += `<p onclick="exibePessoaSelecionada('${item.nome}', '${item.telefone}', '${item.email}')">nome: ${item.nome}, telefone: ${item.telefone}, email: ${item.email}</p>`;
                     }
                 }
             }
         );
     });
 }
+function PesquisaBDCompleto(nome, telefone, email) {
+    bd.transaction(function (ler) {
+        ler.executeSql(
+            `SELECT * FROM clientes WHERE nome = "${nome}" AND telefone = "${telefone}" AND email = "${email}" `,
+            [],
+            function (ler, results) {
+                var len = results.rows.length,
+                    i;
+                msg = "<p>Found rows: " + len + "<p/>";
+                document.getElementById("resposta").innerHTML += msg;
+                exibeInfos(
+                    results.rows.item(i).nome,
+                    results.rows.item(i).telefone,
+                    results.rows.item(i).email
+                );
+                for (let i = 0; i < len; i++) {
+                    for (let j = 0; j < 16; j++) {
+                        preenchaSemana(
+                            results.rows.item(i)[listaPeriodosBd[j]],
+                            listaPeriodosId[j] + "-exibe"
+                        );
+                    }
+                    for (let m = 0; m < 8; m++) {
+                        preenchaServico(
+                            results.rows.item(i)[listaServicosBd[m]],
+                            listaServicosId[m] + "-exibe"
+                        );
+                    }
+                }
+            },
+            null
+        );
+    });
+}
+function exibeInfos(nome, telefone, email) {
+    document.getElementById(
+        "resposta"
+    ).innerHTML = `Nome: ${nome}; Telefone: ${telefone}; E-mail: ${email}`;
+}
 
-function exibePessoaSelecionada(nome) {
-    document.getElementById("bd").value = nome;
-    PesquisaBD();
+function exibePessoaSelecionada(nome, telefone, email) {
+    PesquisaBDCompleto(nome, telefone, email);
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
 }

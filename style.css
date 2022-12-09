@@ -92,9 +92,6 @@ input[type="submit"]:focus {
     animation: uncolor 0.2s ease-in-out forwards;
     animation-duration: 1s;
 }
-*: focus {
-    outline: 0;
-}
 @keyframes uncolor {
     0% {
         background: #157f9a;
@@ -103,7 +100,7 @@ input[type="submit"]:focus {
         background: rgb(12, 163, 218);
     }
 }
- /* @-webkit-keyframes animation {
+/* @-webkit-keyframes animation {
     0% {
         background: #157f9a;
     }
@@ -127,7 +124,7 @@ a input[type="button"] {
     cursor: pointer;
     margin: 15px;
     width: 50px;
-    height: 30px;
+    height: 25px;
 }
 a input[type="button"]:hover {
     color: #000000;
@@ -168,7 +165,7 @@ div ol img {
     border-color: rgb(7, 6, 6);
 }
 .enviar {
-    background-color: rgb(255, 0, 0);
+    background-color: rgb(200, 255, 0);
     border-color: rgb(7, 6, 6);
     margin: 17px 5px;
     padding: 5px;

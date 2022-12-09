@@ -2,25 +2,32 @@
     /* display: flex; */
     box-shadow: 5px 5px 5px 5px;
     color: black;
-    
+
     /* align-items: center; */
     border-radius: 5px;
 }
 
-
 .tituloLogin {
     margin: 5px 135px;
 }
-.card-content-area {    
-    
+.card-content-area {
     margin: 15px 60px;
-}    
+}
 .card-footer {
     margin: 5px 30px;
-}    
+}
+/* .enviarLogin{
+    display: flex;
+    justify-content: center;
+
+} */
+.buttons-login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 main {
     display: flex;
     justify-content: center;
 }
-                 
